@@ -1,12 +1,114 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="./js/main.js" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
 
-  </body>
+</head>
+
+<body class="page__body no-js">
+
+  <header class="main-header">
+    <!-- Навигация -->
+    <div class="main-header__wrapper">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="#" width="86" height="34"
+          alt="Логотип Седона">
+      </a>
+      <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
+    <nav class="main-nav main-header__nav">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__item-link main-nav__item-link--current" href="catalog.html">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="form.html">
+              Вязание на заказ
+            </a>
+          </li>
+        </ul>
+        <ul class="main-nav__list main-nav__list-right">
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="form.html">
+              <span class="main-nav__item-link-search">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="#">
+              <span class="main-nav__item-link-search">Корзина: пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <h1 class="visually-hidden">Мишка-интернет магазин вещей ручной работы</h1>
+    <section class="hero">
+      <h2 class="hero__title">Милые штуки ручной работы для дома</h2>
+
+      <div class="hero__menu">
+        <ul class="hero__menu-list">
+          <li class="hero__menu-item">
+            Предметы интерьера
+          </li>
+          <li class="hero__menu-item">
+            Детские игрушки
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="offer">
+     <h2 class="offer__title">Вязаные корзинки</h2>
+     <p class="offer__week">ТОВАР НЕДЕЛИ</p>
+     <p class="offer-description">Экологически чистая пряжа,
+      ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+      <dl class="offer__list">
+        <div class="offer__item">
+          <dt class="offer__unit">
+            Цвет:
+          </dt>
+          <dd class="offer__description">
+            тиффани/серый 25 см 15 см
+          </dd>
+        </div>
+        <div class="offer__item">
+          <dt class="offer__unit">
+            Диаметр:
+          </dt>
+          <dd class="offer__description">
+            25 см
+          </dd>
+        </div>
+        <div class="offer__item">
+          <dt class="offer__unit">
+            Высота:
+          </dt>
+          <dd class="offer__description">
+            15 см
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+  </main>
+
+
+
+</body>
+
 </html>
