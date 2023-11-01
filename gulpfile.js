@@ -11,6 +11,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgstore from 'gulp-svgstore';
 import svgo from 'gulp-svgo';
 import { deleteAsync } from 'del';
+import { stacksvg } from 'gulp-stacksvg';
 
 // Styles
 
@@ -25,7 +26,7 @@ export const styles = () => {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
-    done()
+
 }
 
 // HTML
@@ -34,7 +35,7 @@ const html = () => {
   return  gulp.src("source/*.html")
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest("build"));
-  done()
+
   }
 
 // Images
@@ -43,13 +44,13 @@ const optimizeImages = () => {
   return  gulp.src("source/img/**/*.{png,jpg}")
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
-  done()
+
 }
 
-const copyImages = () => {
+export const copyImages = () => {
   return  gulp.src("source/img/**/*.{png,jpg}")
   .pipe(gulp.dest("build/img"))
-  done()
+
   }
 
 // Scripts
@@ -57,7 +58,7 @@ const copyImages = () => {
 const scripts = () => {
   return  gulp.src("source/js/*.js")
   .pipe(gulp.dest("build/js"))
-  done()
+
   }
 
 // WebP
@@ -67,7 +68,7 @@ const createWebp = () => {
   .pipe(squoosh({webp: {}
   }))
   .pipe(gulp.dest("build/img"));
-  done()
+
   }
 
  // Svg
@@ -76,18 +77,24 @@ const createWebp = () => {
   return  gulp.src(['source/img/**/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest("build/img"));
-  done()
+
  }
 
  const sprite = () => {
-  return  gulp.src("source/img/icon/*")
+  return  gulp.src("source/img/icons/*.svg")
   .pipe(svgo())
   .pipe(svgstore({
   inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img/sprite"));
-  done()
+  .pipe(gulp.dest("build/img"));
+
+  }
+
+ export const makeStack = () => {
+    return  gulp.src("source/img/icons/*.svg")
+    .pipe(stacksvg({ output: "stack"}))
+    .pipe(gulp.dest("build/img"));
   }
 
 // Copy

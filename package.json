@@ -19,7 +19,9 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "makeStack": "gulp makeStack",
+    "copyImages": "gulp copyImages"
   },
   "browserslist": [
     "last 2 versions",
@@ -46,6 +48,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-libsquoosh": "^1.1.2",
     "gulp-rename": "^2.0.0",
+    "gulp-stacksvg": "^3.0.0",
     "gulp-svgo": "^2.2.1",
     "gulp-svgstore": "^9.0.0",
     "postcss-csso": "^6.0.1"
