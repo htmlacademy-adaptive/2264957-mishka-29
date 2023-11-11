@@ -20,7 +20,7 @@
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp",
-    "makeStack": "gulp makeStack",
+    "stack": "gulp stack",
     "copyImages": "gulp copyImages"
   },
   "browserslist": [

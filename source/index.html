@@ -18,11 +18,15 @@
 
   <header class="main-header">
     <!-- Навигация -->
-    <div class="main-header__wrapper">
+    <div class="main-header__wrapper container">
       <a class="main-header__logo" href="index.html">
-        <svg class="main-header__logo-img" width="86" height="35">
-          <use xlink:href="./img/stack.svg#mishka-logo-mobile"></use>
-        </svg>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-tablet.svg" width="113" height="46">
+
+          <source media="(min-width: 768px)" srcset="img/icons/mishka-logo-tablet.svg" width="113" height="46">
+
+          <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка.">
+        </picture>
       </a>
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
@@ -42,13 +46,13 @@
         </ul>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">
-              <span class="main-nav__item-link main-nav__item-link--search">Поиск по сайту</span>
+            <a class="main-nav__item-link main-nav__item-link--search" href="form.html">
+              <span class="main-nav__item-link">Поиск по сайту</span>
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span class="main-nav__item-link main-nav__item-link--search">Корзина: пока пуста</span>
+            <a class="main-nav__item-link main-nav__item-link--basket" href="#">
+              <span class="main-nav__item-link">Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
@@ -63,10 +67,8 @@
               <span class="main-nav__item-link">Распродажа</span>
             </a>
           </li>
-          <li class="main-nav__item">
-            <p class="main-nav__item-paragraph">Бесплатная доставка по России</p>
-          </li>
         </ul>
+        <p class="main-nav__item-paragraph">Бесплатная доставка по России</p>
       </div>
     </nav>
 
@@ -223,15 +225,15 @@
         </a>
       </div>
       <div class="page__footer-social social">
-        <a class="social__link social__vk" href="#">
+        <a class="social__link social--vk" href="#">
 
           <span class="visually-hidden">В контакте</span>
         </a>
-        <a class="social__link social__tg" href="#">
+        <a class="social__link social--tg" href="#">
 
           <span class="visually-hidden">Телеграм</span>
         </a>
-        <a class="social__link social__yt" href="#">
+        <a class="social__link social--yt" href="#">
 
           <span class="visually-hidden">Ютуб</span>
         </a>

@@ -6,6 +6,8 @@
 .main-header__wrapper {
   display: flex;
   padding: 22px 33px;
+  position: relative;
+  height: 79px;
 
   @include tablet {
     padding: 0;
@@ -14,7 +16,6 @@
 
 .main-header__nav {
   position: absolute;
-  top: 100%;
   width: 100%;
   z-index: 3;
   display: none;
@@ -30,15 +31,20 @@
 
 .main-header__logo {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 3;
+
+  @include tablet {
+    left: 60px;
+    transform: translate(0, -50%);
+  }
 }
 
 .main-header__button {
   display: block;
-  background-image: url("../img/stack.svg#menu-close");
+  background-image: url("../img/stack.svg#menu-open");
   width: 20px;
   height: 14px;
   border: none;
@@ -47,6 +53,10 @@
   background-position: center;
   margin-left: auto;
   z-index: 5;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
 
   &:hover {
     opacity: 0.6;
@@ -62,21 +72,20 @@
 }
 
 
-.no-js {
-  .main-header__nav {
-    display: block;
-    position: static;
-    z-index: 5555;
-    margin-top: 0;
-  }
-}
 
-.no-js {
-  .main-header__button {
-    display: none;
-  }
-}
 
 .main-header__logo-image {
   max-width: none;
 }
+
+.main-header__toggle-closed {
+  background-image: url("../img/icons/menu-close.svg");
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: var(--blue);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
