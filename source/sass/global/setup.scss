@@ -9,6 +9,8 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  min-width: 320px;
+  max-width: 1150px;
 }
 
 html {
@@ -49,7 +51,7 @@ a {
   padding-right: 30px;
 
   @include tablet {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 49px;
+  padding-right: 49px;
   }
 }

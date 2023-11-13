@@ -21,7 +21,7 @@
     <div class="main-header__wrapper container">
       <a class="main-header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-tablet.svg" width="113" height="46">
+          <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-desktop.svg" width="149" height="72">
 
           <source media="(min-width: 768px)" srcset="img/icons/mishka-logo-tablet.svg" width="113" height="46">
 
@@ -30,41 +30,41 @@
       </a>
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
-    <nav class="main-nav main-header__nav">
+    <nav class="main-nav main-header__nav container">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--current" href="catalog.html">
+        <ul class="main-nav__list main-nav__list--catalog">
+          <li class="main-nav__item main-nav__item--catalog">
+            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current" href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">
+          <li class="main-nav__item main-nav__item--knitting">
+            <a class="main-nav__item-link main-nav__item-link--catalog" href="form.html">
               Вязание на заказ
             </a>
           </li>
         </ul>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
+        <ul class="main-nav__list main-nav__list--navigation">
+          <li class="main-nav__item main-nav__item--search">
             <a class="main-nav__item-link main-nav__item-link--search" href="form.html">
-              <span class="main-nav__item-link">Поиск по сайту</span>
+              <span class="main-nav__item-link main-nav__item-link-span--search">Поиск по сайту</span>
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--basket">
             <a class="main-nav__item-link main-nav__item-link--basket" href="#">
               <span class="main-nav__item-link">Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
         <ul class="main-nav__list main-nav__list--desktop">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span class="main-nav__item-link">Новые поступления</span>
+          <li class="main-nav__item main-nav__item--new">
+            <a class="main-nav__item-link main-nav__item-link--new" href="#">
+              <span class="main-nav__item-link main-nav__item-link--new">Новые поступления</span>
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--sale">
             <a class="main-nav__item-link" href="#">
-              <span class="main-nav__item-link">Распродажа</span>
+              <span class="main-nav__item-link main-nav__item-link--sale">Распродажа</span>
             </a>
           </li>
         </ul>
@@ -77,7 +77,7 @@
   <main class="main-container">
     <h1 class="visually-hidden">Мишка-интернет магазин вещей ручной работы</h1>
     <section class="hero">
-      <h2 class="hero__title">Милые штуки ручной работы для дома</h2>
+      <h2 class="hero__title">Милые штуки ручной работы&nbsp;для дома</h2>
 
       <div class="hero__menu">
         <ul class="hero__menu-list">

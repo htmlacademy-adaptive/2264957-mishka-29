@@ -6,5 +6,5 @@ nojsElement.classList.remove('no-js');
 
 toggleButtonElement.addEventListener('click', function(){
   toggleButtonElement.classList.toggle('main-header__toggle-closed');
-  menuElement.classList.toggle('menu-nav_opened')
+  menuElement.classList.toggle('menu-nav__opened')
 })

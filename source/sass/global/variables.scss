@@ -2,6 +2,7 @@
 
 $white: #ffffff;
 $sea-wave: #47c2af;
+$light-grey: rgba(237, 237, 237, 0.3);
 $basic-grey: #eeeeee;
 $special-grey: #e6e6e6;
 $dark-grey: #e5e5e5;
@@ -27,7 +28,7 @@ $link-text-active: rgba($black, 0.3);
 // BACKGROUND COLORS
 
 $main-background: $white;
-$secondary-background: $white;
+$secondary-background: $light-grey;
 $additional-background: $basic-blue;
 $reverse-background: $black;
 $advantages-background: $basic-grey;

@@ -1,6 +1,16 @@
 .main-header {
   background-color: transparent;
   position: relative;
+
+  @include tablet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-image: linear-gradient($main-background 88px, $secondary-background 88px, $secondary-background );
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 259px 1fr;
+  }
 }
 
 .main-header__wrapper {
@@ -10,7 +20,14 @@
   height: 79px;
 
   @include tablet {
+    height: 95px;
     padding: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  @include desktop {
+    grid-column: 2/3;
   }
 }
 
@@ -34,11 +51,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 4;
 
   @include tablet {
-    left: 60px;
+    left: 49px;
     transform: translate(0, -50%);
+  }
+
+  @include desktop {
+    left: 53px;
   }
 }
 
@@ -83,9 +104,21 @@
   width: 22px;
   height: 22px;
   border: none;
-  background-color: var(--blue);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.no-js {
+  .main-header__nav {
+    display: block;
+    position: static;
+    z-index: 5555;
+    margin-top: 0;
+  }
+}
 
+.no-js {
+  .main-header__button {
+    display: none;
+  }
+}
