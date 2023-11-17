@@ -37,7 +37,8 @@
   z-index: 3;
   display: none;
   left: 0;
-  top: 0;
+  top: 79px;
+  width: 100%;
 
   @include tablet {
     position: static;

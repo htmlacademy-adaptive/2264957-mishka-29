@@ -59,5 +59,10 @@ a {
 
   &--mobile {
     padding: 0;
+
+    @include tablet {
+      padding-left: 49px;
+      padding-right: 49px;
+    }
   }
 }
