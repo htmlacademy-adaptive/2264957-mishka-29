@@ -5,7 +5,7 @@
   @include tablet {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-image: linear-gradient($main-background 88px, $secondary-background 88px, $secondary-background );
+  background-image: linear-gradient($main-background 88px, $border-nav 88px, $border-nav 89px, $secondary-background 89px );
   }
 
   @include desktop {
@@ -54,7 +54,7 @@
   z-index: 4;
 
   @include tablet {
-    left: 49px;
+    left: 16px;
     transform: translate(0, -50%);
   }
 

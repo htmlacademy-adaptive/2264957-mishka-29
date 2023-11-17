@@ -1,0 +1,89 @@
+.about-us__title {
+  margin-top: 38px;
+  padding-bottom: 82px
+}
+
+.about-us__list {
+  @include list;
+  display: grid;
+  row-gap: 83px;
+}
+
+.about-us__item {
+  position: relative;
+  color: $heading-text;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: top;
+    fill: $tiffani;
+  }
+
+    &--flower {
+      &::before {
+      background-image: url("../img/stack.svg#flower");
+      width: 33px;
+      height: 38px;
+      top: -54px;
+      left: 7px;
+    }
+  }
+
+    &--money {
+      &::before {
+      background-image: url("../img/stack.svg#money");
+      width: 47px;
+      height: 27px;
+      top: -53px;
+      left: 0;
+    }
+  }
+
+  &--heart {
+    &::before {
+    background-image: url("../img/stack.svg#heart");
+    width: 34px;
+    height: 27px;
+    top: -48px;
+    left: 7px;
+  }
+}
+
+&--clew {
+  &::before {
+  background-image: url("../img/stack.svg#clew");
+  width: 35px;
+  height: 34px;
+  top: -51px;
+    left: 3px;
+}
+}
+
+&--rocket {
+  &::before {
+  background-image: url("../img/stack.svg#rocket");
+  width: 55px;
+  height: 23px;
+  top: -51px;
+    left: -6px;
+}
+}
+
+&--present {
+  &::before {
+  background-image: url("../img/stack.svg#present");
+  width: 33px;
+  height: 32px;
+  top: -52px;
+  left: 3px;
+}
+}
+
+}

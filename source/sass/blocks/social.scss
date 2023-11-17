@@ -1,0 +1,16 @@
+.social__link {
+  fill: $special-black;
+
+  &:hover {
+    svg {
+      fill: $logo-hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $logo-hover;
+      opacity: 0.3;
+    }
+  }
+}

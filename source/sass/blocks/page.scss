@@ -1,0 +1,103 @@
+.page__title {
+  color: $heading-text;
+  font-family: inherit;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+}
+
+.page__text {
+  color: $main-text;
+  font-family: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.page__button {
+  border: 2px solid $main-text;
+  background-color: $white;
+  padding: 13px 70px;
+  width: 100%;
+  color: $main-text;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.page__footer {
+  background-color: $special-grey;
+}
+
+.page__footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page__footer-social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 27px;
+  width: 100%;
+  padding: 25px 0 28px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $footer-border;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+
+.page__footer-logo {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.page__footer-html-wrapper {
+  margin: 0 auto;
+  padding: 29px 0 32px 0;
+}
+
+.page__footer-html {
+  color: $main-text;
+  font-family: inherit;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+
+  &:hover {
+    svg {
+      fill: $logo-htmlacademy-hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $logo-htmlacademy;
+      opacity: 0.3;
+    }
+  }
+}
+
+.page__footer-html-img {
+  margin-left: 27px;
+  vertical-align: middle;
+  fill: $logo-htmlacademy;
+}

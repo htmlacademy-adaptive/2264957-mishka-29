@@ -18,7 +18,7 @@
 
   <header class="main-header">
     <!-- Навигация -->
-    <div class="main-header__wrapper container">
+    <div class="main-header__wrapper container container--mobile">
       <a class="main-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-desktop.svg" width="149" height="72">
@@ -81,43 +81,43 @@
 
       <div class="hero__menu">
         <ul class="hero__menu-list">
-          <li class="hero__menu-item">
+          <li class="hero__menu-item hero__menu-item--top">
             <a class="hero__menu-item-link" href="#">Предметы интерьера</a>
           </li>
-          <li class="hero__menu-item">
+          <li class="hero__menu-item hero__menu-item--bottom">
             <a class="hero__menu-item-link" href="#">Детские игрушки</a>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="offer">
-      <h2 class="offer__title">Вязаные корзинки</h2>
+    <section class="offer container">
+      <h2 class="offer__title page__title">Вязаные корзинки</h2>
       <p class="offer__week">ТОВАР НЕДЕЛИ</p>
-      <p class="offer-description">Экологически чистая пряжа,
+      <p class="offer-description page__text">Экологически чистая пряжа,
         ручная работа. Доступны в шести расцветках и трёх размерах.</p>
       <dl class="offer__list">
         <div class="offer__item">
-          <dt class="offer__unit">
+          <dt class="offer__unit page__text">
             Цвет:
           </dt>
-          <dd class="offer__description">
-            тиффани/серый 25 см 15 см
+          <dd class="offer__description page__text">
+            тиффани/серый
           </dd>
         </div>
         <div class="offer__item">
-          <dt class="offer__unit">
+          <dt class="offer__unit page__text">
             Диаметр:
           </dt>
-          <dd class="offer__description">
+          <dd class="offer__description page__text">
             25 см
           </dd>
         </div>
         <div class="offer__item">
-          <dt class="offer__unit">
+          <dt class="offer__unit page__text">
             Высота:
           </dt>
-          <dd class="offer__description">
+          <dd class="offer__description page__text">
             15 см
           </dd>
         </div>
@@ -134,20 +134,20 @@
       </picture>
       <div class="offer__order">
         <p class="offer__order-price">Цена: 990 руб.</p>
-        <button class="offer__order-buttoon">ЗАКАЗАТЬ</button>
+        <button class="offer__order-buttoon page__button">ЗАКАЗАТЬ</button>
       </div>
     </section>
-    <section class="about-us">
-      <h2 class="about-us__title">Коротко о нас:</h2>
+    <section class="about-us container">
+      <h2 class="about-us__title page__title">Коротко о нас:</h2>
       <ul class="about-us__list">
-        <li class="about-us__item">Экологически чистые материалы</li>
-        <li class="about-us__item">Скандинавский стиль по российской цене</li>
-        <li class="about-us__item">Увеличивает лайкина фотографиях</li>
-        <li class="about-us__item">Связано вручную
-          с любовью и умилением</li>
-        <li class="about-us__item">Поддержка отечественного производителя</li>
-        <li class="about-us__item">Поставляется
-          в подарочной упаковке</li>
+        <li class="about-us__item about-us__item--flower">Экологически чистые&nbsp;материалы</li>
+        <li class="about-us__item about-us__item--money">Скандинавский стиль по&nbsp;российской цене</li>
+        <li class="about-us__item about-us__item--heart">Увеличивает лайки на&nbsp;фотографиях</li>
+        <li class="about-us__item about-us__item--clew">Связано вручную
+          с&nbsp;любовью&nbsp;и умилением</li>
+        <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
+        <li class="about-us__item about-us__item--present">Поставляется
+          в&nbsp;подарочной&nbsp;упаковке</li>
       </ul>
     </section>
     <section class="reviews">
@@ -216,7 +216,7 @@
   </main>
 
   <footer class="page__footer">
-    <div class="page__footer-wrapper">
+    <div class="page__footer-wrapper container">
       <div class="page__footer-logo-wrapper">
         <a class="page__footer-logo" href="index.html">
           <svg class="page__footer-logo-img" width="86" height="35">
@@ -225,31 +225,33 @@
         </a>
       </div>
       <div class="page__footer-social social">
-        <a class="social__link social--vk" href="#">
-          <svg class="social--vk" width="28" height="22">
+        <a class="social__link social__vk" href="#">
+          <svg class="social__vk-img" width="28" height="22">
             <use xlink:href="./img/stack.svg#vkontakte"></use>
           </svg>
           <span class="visually-hidden">В контакте</span>
         </a>
-        <a class="social__link social--tg" href="#">
-          <svg class="social--tg" width="28" height="22">
+        <a class="social__link social__tg" href="#">
+          <svg class="social__tg-img" width="28" height="22">
             <use xlink:href="./img/stack.svg#telegram"></use>
           </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
-        <a class="social__link social--yt" href="#">
-          <svg class="social--yt" width="28" height="22">
+        <a class="social__link social__yt" href="#">
+          <svg class="social__yt-img" width="28" height="22">
             <use xlink:href="./img/stack.svg#youtube"></use>
           </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
       </div>
-      <a class="page__footer-html">Разработано
+      <div class="page__footer-html-wrapper">
+      <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
         <svg class="page__footer-html-img" width="27" height="34">
           <use xlink:href="./img/stack.svg#htmlacademy"></use>
         </svg>
         <span class="visually-hidden">Разработано html academy</span>
       </a>
+    </div>
     </div>
   </footer>
 

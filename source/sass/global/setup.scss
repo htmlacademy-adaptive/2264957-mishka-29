@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100%;
   font-family: "Open Sans", "Arial", sans-serif;
   color: #000;
@@ -9,8 +9,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  min-width: 320px;
-  max-width: 1150px;
 }
 
 html {
@@ -51,9 +49,15 @@ a {
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
+  min-width: 320px;
+  max-width: 1150px;
 
   @include tablet {
     padding-left: 49px;
     padding-right: 49px;
+  }
+
+  &--mobile {
+    padding: 0;
   }
 }

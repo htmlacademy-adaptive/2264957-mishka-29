@@ -9,6 +9,7 @@ import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import squoosh from 'gulp-libsquoosh';
 import svgstore from 'gulp-svgstore';
+import cheerio from 'gulp-cheerio';
 import svgo from 'gulp-svgo';
 import { deleteAsync } from 'del';
 import { stacksvg } from 'gulp-stacksvg';
@@ -93,6 +94,13 @@ const createWebp = () => {
 
  export const stack = () => {
     return  gulp.src("source/img/icons/*.svg")
+    .pipe(cheerio({
+      run: ($) => {
+        $('[fill]').removeAttr('fill'),
+        $('[stroke]').removeAttr('stroke');
+      },
+      parserOptions: { xmlMode: true }
+    }))
     .pipe(stacksvg({ output: "stack"}))
     .pipe(gulp.dest("build/img"));
   }

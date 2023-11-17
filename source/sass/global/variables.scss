@@ -2,28 +2,35 @@
 
 $white: #ffffff;
 $sea-wave: #47c2af;
+$tiffani: #63D1BB;
+$tiffany-dark: #46C1AE;
+$special-tiffany: #56C3B2;
+$dark-sea: #149080;
 $light-grey: rgba(237, 237, 237, 0.3);
 $basic-grey: #eeeeee;
-$special-grey: #e6e6e6;
+$special-grey: #f1f1f1;
 $dark-grey: #e5e5e5;
 $basic-blue: #81b3d2;
 $special-blue: #669ec0;
 $dark-blue: #5496bd;
 $status-error: #ff0000;
 $brown: #766357;
-$dark: #333333;
+$dark: #000000;
 $shadow: #000101;
 $grey-shadow: #ececec;
 $black: #000000;
+$special-black: #444444;
+$light-black: rgba(0, 0, 0, 0.1);
 
 // TEXT COLORS
 
-$main-text: $dark;
+$main-text: $special-black;
 $heading-text: $black;
 $bright-text: $white;
 $link-text-current: $brown;
 $link-text-hover: $basic-blue;
 $link-text-active: rgba($black, 0.3);
+$hero-links: $white;
 
 // BACKGROUND COLORS
 
@@ -34,6 +41,7 @@ $reverse-background: $black;
 $advantages-background: $basic-grey;
 $photo-background: #eaeaea;
 $intro-background: $dark-blue;
+$footer-background: $special-grey;
 
 // SHADOWS
 
@@ -65,6 +73,15 @@ $input-control-active: #d5d5d5;
 // LOGO
 
 $logo-hover: $sea-wave;
+$logo-htmlacademy: $tiffani;
+$logo-htmlacademy-hover: $tiffany-dark;
+$social-icons: $special-black;
+
+// BORDERS
+
+$border-nav: $light-black;
+$footer-border: $dark-grey;
+$offer-border: $grey-shadow;
 
 
 // Viewports

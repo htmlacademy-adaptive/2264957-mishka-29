@@ -1,0 +1,61 @@
+.offer {
+  padding-bottom: 36px;
+}
+
+.offer__title {
+  padding-bottom: 4px;
+}
+
+.offer__week {
+  color: $tiffani;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 17px;
+}
+
+.offer-description {
+  padding-bottom: 26px;
+}
+
+.offer__list {
+  @include list;
+
+  margin-bottom: 23px;
+}
+
+.offer__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 97px 1fr;
+  padding-bottom: 16px;
+
+  &::after {
+    content: "";
+    border-bottom: 1px solid $offer-border;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+  }
+}
+
+.offer__order {
+  margin-top: 20px;
+}
+
+.offer__order-price {
+  color: $main-text;
+  text-align: center;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 25px;
+}
