@@ -61,7 +61,7 @@
 
 .main-nav__item {
   position: relative;
-  padding: 26px 26px 26px 76px;
+
   text-align: left;
   background-color: $main-background;
   box-shadow: 0px 1px 0px 0px $navigation-shadow, 0px 1px 0px 0px $navigation-shadow inset;
@@ -70,22 +70,6 @@
     box-shadow: none;
     background-color: transparent;
 
-    &--catalog {
-      padding: 20px 0;
-    }
-
-    &--knitting {
-      padding: 20px 0;
-    }
-
-    &--basket {
-      padding: 32px 0 32px 83px;
-    }
-
-    &--search {
-      width: 82px;
-      padding: 44px 14px 44px 12px;
-    }
 
     &--search::after {
       position: absolute;
@@ -103,24 +87,6 @@
       left: 0;
       top: 0;
       height: 100%;
-    }
-  }
-
-  @include desktop {
-    &--catalog {
-      padding: 32px 0;
-    }
-
-    &--knitting {
-      padding: 32px 0 32px 41px;
-    }
-
-    &--new {
-      padding: 20px 0;
-    }
-
-    &--sale {
-      padding: 20px 0 20px 45px;
     }
   }
 }
@@ -149,6 +115,8 @@
 }
 
 .main-nav__item-link {
+  padding: 29px 26px 26px 76px;
+  display: block;
   position: relative;
   color: $heading-text;
   font-family: inherit;
@@ -158,35 +126,43 @@
   line-height: 24px;
   text-decoration: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 50%;
-    left: -44px;
-    transform: translateY(-50%);
-  }
+  @include tablet {
+    &--catalog {
+      padding: 20px 0;
+    }
 
-  &--search::before {
-    background-image: url("../img/stack.svg#search");
+    &--knitting {
+      padding: 20px 0;
+    }
 
-    @include tablet {
-      left: 17px;
+    &--basket {
+      padding: 32px 0 32px 83px;
+    }
+
+    &--search {
+      width: 82px;
+      padding: 44px 14px 44px 12px;
     }
   }
 
-  &--basket::before {
-    background-image: url("../img/stack.svg#basket");
-    width: 21px;
 
-    @include tablet {
-      left: -53px;
+  @include desktop {
+    &--catalog {
+      padding: 32px 0;
+    }
+
+    &--knitting {
+      padding: 32px 0 32px 41px;
+    }
+
+    &--new {
+      padding: 20px 0;
+    }
+
+    &--sale {
+      padding: 20px 0 20px 45px;
     }
   }
-
 
   &--catalog {
     @include tablet {
@@ -204,8 +180,8 @@
   &--new {
     @include desktop {
       display: block;
-    font-size: 15px;
-    width: 174px;
+      font-size: 15px;
+      width: 174px;
     }
   }
 
@@ -214,7 +190,62 @@
       font-size: 15px;
     }
   }
-}
+
+  &--search::before {
+    content: "";
+    mask-image: url("../img/stack.svg#search");
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+
+    @include tablet {
+      left: 31px;
+    }
+
+  }
+
+    &--basket::before {
+      content: "";
+      mask-image: url("../img/stack.svg#basket");
+      position: absolute;
+      width: 21px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.9);
+
+      @include tablet {
+        left: 30px;
+      }
+    }
+
+    &:hover {
+      opacity: 0.6;
+
+      &::before {
+        opacity: 1;
+        background-color: $tiffani;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      &::before {
+        background-color: $tiffani;
+      }
+    }
+  }
+
 
 
 .main-nav__item-link-span {

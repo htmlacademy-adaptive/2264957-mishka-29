@@ -62,6 +62,14 @@
   @include desktop {
     left: 53px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-header__button {

@@ -1,0 +1,48 @@
+.contacts__title {
+  padding-bottom: 28px;
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+
+  &--mail {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__info {
+  color: $special-black;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 0;
+
+  &--mail {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      border-bottom: 1px solid $tiffani;
+      display: block;
+      width: 169px;
+      left: 0;
+      top: 27px;
+    }
+  }
+}
+
+.contacts__map {
+  padding-top: 63px;
+  margin-bottom: 34px;
+}
+
+.contacts__button {
+  width: 260px;
+  padding: 16px 38px;
+  margin: 0 auto;
+  margin-bottom: 42px;
+  height: 52px;
+}

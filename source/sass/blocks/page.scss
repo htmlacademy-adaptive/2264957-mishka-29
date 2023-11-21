@@ -6,6 +6,11 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .page__text {
@@ -31,6 +36,17 @@
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+  display: block;
+
+  &:hover {
+    background-color: $special-black;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $special-black;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .page__footer {
@@ -71,7 +87,7 @@
 
 .page__footer-html-wrapper {
   margin: 0 auto;
-  padding: 29px 0 32px 0;
+  padding: 21px 0 32px 0;
 }
 
 .page__footer-html {
@@ -100,4 +116,26 @@
   margin-left: 27px;
   vertical-align: middle;
   fill: $logo-htmlacademy;
+}
+
+.page__line {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    mask-image: url("../img/stack.svg#zigzag-line");
+    height: 6px;
+    width: 100%;
+    background-color: $special-grey;
+    bottom: -7px;
+    left: 0;
+  }
+
+  &--reviews {
+    &::after {
+      bottom: -52px;
+    }
+  }
 }
