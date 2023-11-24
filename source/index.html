@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.min.css">
   <script src="./js/main.js" defer></script>
   <script src="./js/slider.js" defer></script>
+  <script src="./js/modal.js" defer></script>
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
@@ -40,7 +41,7 @@
             </a>
           </li>
           <li class="main-nav__item main-nav__item--knitting">
-            <a class="main-nav__item-link main-nav__item-link--catalog" href="form.html">
+            <a class="main-nav__item-link main-nav__item-link--knitting" href="form.html">
               Вязание на заказ
             </a>
           </li>
@@ -83,10 +84,10 @@
       <div class="hero__menu">
         <ul class="hero__menu-list">
           <li class="hero__menu-item hero__menu-item--interior">
-            <a class="hero__menu-item-link" href="#">Предметы интерьера</a>
+            <a class="hero__menu-item-link" href="#">Предметы<br>интерьера</a>
           </li>
           <li class="hero__menu-item hero__menu-item--toy">
-            <a class="hero__menu-item-link" href="#">Детские игрушки</a>
+            <a class="hero__menu-item-link" href="#">Детские<br>игрушки</a>
           </li>
         </ul>
       </div>
@@ -97,7 +98,7 @@
       <h2 class="offer__title page__title">Вязаные корзинки</h2>
       <p class="offer__week">ТОВАР НЕДЕЛИ</p>
       <p class="offer-description page__text">Экологически чистая пряжа,
-        ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+        ручная&nbsp;работа. Доступны в шести расцветках и трёх размерах.</p>
       <dl class="offer__list">
         <div class="offer__item">
           <dt class="offer__unit page__text">
@@ -125,10 +126,10 @@
         </div>
       </dl>
       <picture class="offer__img-wrapper">
-        <source width="334" height="404"
-          srcset="img/pictures/triple-set-desktop.jpg 1x, img/pictures/triple-set-desktop@2.jpg 2x"
-          media="(min-width: 1150px)">
         <source width="525" height="636"
+          srcset="img/pictures/triple-set-desktop.jpg 1x, img/pictures/triple-set-desktop@2x.jpg 2x"
+          media="(min-width: 1150px)">
+        <source width="334" height="404"
           srcset="img/pictures/triple-set-tablet.jpg 1x, img/pictures/triple-set-tablet@2x.jpg 2x"
           media="(min-width: 768px)">
         <img class="offer__img" src="img/pictures/triple-set-mobile.jpg"
@@ -147,7 +148,7 @@
         <li class="about-us__item about-us__item--money">Скандинавский стиль по&nbsp;российской цене</li>
         <li class="about-us__item about-us__item--heart">Увеличивает лайки на&nbsp;фотографиях</li>
         <li class="about-us__item about-us__item--clew">Связано вручную
-          с&nbsp;любовью&nbsp;и умилением</li>
+          с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
         <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
         <li class="about-us__item about-us__item--present">Поставляется
           в&nbsp;подарочной&nbsp;упаковке</li>
@@ -193,6 +194,7 @@
     </section>
     <section class="contacts">
       <h2 class="contacts__title page__title container">Контакты</h2>
+      <div class="contacts__wrapper-wrap">
       <div class="contacts__wrapper contacts__wrapper--mail container">
       <p class="contacts__info">e-mail:</p>
         <a class="contacts__info contacts__info--mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
@@ -201,12 +203,13 @@
       <p class="contacts__info">адрес:</p>
         <address class="contacts__info contacts__info--address">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;19/8, офис 101</address>
       </div>
+      </div>
       <div class="contacts__map">
 
         <picture class="contacts__map-wrapper">
-          <source width="527" height="457" srcset="img/pictures/map-desktop.jpg 1x, img/pictures/map-desktop@2.jpg 2x"
+          <source width="527" height="457" srcset="img/pictures/map-desktop.jpg 1x, img/pictures/map-desktop@2x.jpg 2x"
           media="(min-width: 1150px)">
-          <source width="768" height="457" srcset="img/pictures/map-tablet.jpg 1x, img/pictures/map-tablet@2.jpg 2x" media="(min-width: 768px)">
+          <source width="768" height="457" srcset="img/pictures/map-tablet.jpg 1x, img/pictures/map-tablet@2x.jpg 2x" media="(min-width: 768px)">
           <img class="contacts__map-img" src="img/pictures/map-mobile.jpg"
           srcset="img/pictures/map-mobile@2x.jpg 2x" width="320" height="454" alt="Карта">
         </picture>
@@ -223,8 +226,8 @@
     <div class="page__footer-wrapper container">
       <div class="page__footer-logo-wrapper">
         <a class="page__footer-logo" href="index.html">
-          <svg class="page__footer-logo-img" width="86" height="35">
-            <use xlink:href="./img/stack.svg#mishka-logo-mobile"></use>
+          <svg class="page__footer-logo-img" width="102" height="34">
+            <use xlink:href="./img/stack.svg#logo-footer"></use>
           </svg>
         </a>
       </div>
@@ -258,6 +261,45 @@
     </div>
     </div>
   </footer>
+
+  <section class="modal">
+    <div class="modal__order-message order-message">
+      <h2 class="order-message__heading page__title">Добавить&nbsp;<br>в корзину</h2>
+
+      <form class="order-message__form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="order-message__description page__text">Выберите размер:</p>
+
+        <ul class="order-message__list">
+          <li class="order-message__item">
+            <label class="order-message__label">
+              <input class="visually-hidden order-message__control" type="radio" name="size" value="S" checked>
+
+              <span class="order-message__control-description">S</span>
+            </label>
+          </li>
+
+          <li class="order-message__item">
+            <label class="order-message__label">
+              <input class="visually-hidden order-message__control" type="radio" name="size" value="M">
+
+              <span class="order-message__control-description">M</span>
+            </label>
+          </li>
+
+          <li class="order-message__item">
+            <label class="order-message__label">
+              <input class="visually-hidden order-message__control" type="radio" name="size" value="L">
+
+              <span class="order-message__control-description">L</span>
+            </label>
+          </li>
+        </ul>
+
+        <button class="order-message__button page__button page__button--modal" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
+
 
 
 </body>

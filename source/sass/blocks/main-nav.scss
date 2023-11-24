@@ -10,7 +10,7 @@
   }
 
   @include desktop {
-    grid-template-columns: 1fr 259px 440px;
+    grid-template-columns: 1fr 178px 440px;
   }
 }
 
@@ -39,7 +39,6 @@
     }
 
     @include desktop {
-      padding-right: 49px;
       grid-column: 3/4;
     }
   }
@@ -89,107 +88,6 @@
       height: 100%;
     }
   }
-}
-
-.main-nav__item-paragraph {
-  display: none;
-  margin: 0;
-
-  @include tablet {
-    display: block;
-    grid-column: 3/4;
-    grid-row: 2/3;
-    color: $main-text;
-    text-align: right;
-    font-family: inherit;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    padding: 20px 0;
-  }
-
-  @include desktop {
-    padding-right: 49px;
-  }
-}
-
-.main-nav__item-link {
-  padding: 29px 26px 26px 76px;
-  display: block;
-  position: relative;
-  color: $heading-text;
-  font-family: inherit;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  text-decoration: none;
-
-  @include tablet {
-    &--catalog {
-      padding: 20px 0;
-    }
-
-    &--knitting {
-      padding: 20px 0;
-    }
-
-    &--basket {
-      padding: 32px 0 32px 83px;
-    }
-
-    &--search {
-      width: 82px;
-      padding: 44px 14px 44px 12px;
-    }
-  }
-
-
-  @include desktop {
-    &--catalog {
-      padding: 32px 0;
-    }
-
-    &--knitting {
-      padding: 32px 0 32px 41px;
-    }
-
-    &--new {
-      padding: 20px 0;
-    }
-
-    &--sale {
-      padding: 20px 0 20px 45px;
-    }
-  }
-
-  &--catalog {
-    @include tablet {
-      display: block;
-      font-size: 15px;
-      width: 169px;
-    }
-
-    @include desktop {
-      font-size: 17px;
-      width: 179px;
-    }
-  }
-
-  &--new {
-    @include desktop {
-      display: block;
-      font-size: 15px;
-      width: 174px;
-    }
-  }
-
-  &--sale {
-    @include desktop {
-      font-size: 15px;
-    }
-  }
 
   &--search::before {
     content: "";
@@ -229,20 +127,122 @@
     }
 
     &:hover {
-      opacity: 0.6;
-
       &::before {
-        opacity: 1;
         background-color: $tiffani;
       }
     }
 
     &:active {
-      opacity: 0.3;
-
       &::before {
         background-color: $tiffani;
+        opacity: 0.3;
       }
+    }
+}
+
+.main-nav__item-paragraph {
+  display: none;
+  margin: 0;
+
+  @include tablet {
+    display: block;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    color: $main-text;
+    text-align: right;
+    font-family: inherit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 20px 0;
+  }
+}
+
+.main-nav__item-link {
+  padding: 29px 26px 26px 76px;
+  display: block;
+  position: relative;
+  color: $heading-text;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+
+  @include tablet {
+    &--catalog {
+      padding: 20px 0;
+    }
+
+    &--knitting {
+      padding: 20px 0;
+      font-size: 15px;
+    }
+
+    &--basket {
+      padding: 32px 0 32px 83px;
+    }
+
+    &--search {
+      width: 82px;
+      padding: 44px 14px 44px 12px;
+    }
+  }
+
+
+  @include desktop {
+    &--catalog {
+      padding: 32px 0;
+    }
+
+    &--knitting {
+      padding: 32px 40px 32px 41px;
+      font-size: 17px;
+    }
+
+    &--new {
+      padding: 20px 0;
+    }
+
+    &--sale {
+      padding: 20px 0 20px 45px;
+    }
+  }
+
+  &--catalog {
+    @include tablet {
+      display: block;
+      font-size: 15px;
+      width: 169px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      width: 179px;
+    }
+  }
+
+  &--new {
+    @include desktop {
+      display: block;
+      font-size: 15px;
+      width: 174px;
+    }
+  }
+
+  &--sale {
+    @include desktop {
+      font-size: 15px;
+    }
+  }
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 

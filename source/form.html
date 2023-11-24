@@ -7,6 +7,8 @@
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.min.css">
   <script src="./js/main.js" defer></script>
+  <script src="./js/slider.js" defer></script>
+  <script src="./js/modal.js" defer></script>
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
@@ -18,55 +20,60 @@
 
   <header class="main-header">
     <!-- Навигация -->
-    <div class="main-header__wrapper">
+    <div class="main-header__wrapper container container--mobile">
       <a class="main-header__logo" href="index.html">
-        <svg class="page__footer-html-img" width="86" height="35">
-          <use xlink:href="./img/stack.svg#mishka-logo-mobile"></use>
-        </svg>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-desktop.svg" width="149" height="72">
+
+          <source media="(min-width: 768px)" srcset="img/icons/mishka-logo-tablet.svg" width="113" height="46">
+
+          <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка.">
+        </picture>
       </a>
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
-    <nav class="main-nav main-header__nav">
+    <nav class="main-nav main-header__nav container container--mobile">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--current" href="catalog.html">
+        <ul class="main-nav__list main-nav__list--catalog">
+          <li class="main-nav__item main-nav__item--catalog">
+            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current" href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">
+          <li class="main-nav__item main-nav__item--knitting">
+            <a class="main-nav__item-link main-nav__item-link--knitting" href="form.html">
               Вязание на заказ
             </a>
           </li>
         </ul>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">
-              <span class="main-nav__item-link main-nav__item-link--search">Поиск по сайту</span>
+        <ul class="main-nav__list main-nav__list--navigation">
+          <li class="main-nav__item main-nav__item--search">
+            <a class="main-nav__item-link main-nav__item-link--search" href="form.html">
+              <span class="main-nav__item-link-span main-nav__item-link-span--search">Поиск по сайту</span>
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span class="main-nav__item-link main-nav__item-link--search">Корзина: пока пуста</span>
+          <li class="main-nav__item main-nav__item--basket">
+            <a class="main-nav__item-link main-nav__item-link--basket" href="#">
+              <span class="main-nav__item-link-span main-nav__item-link-span--basket">Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
         <ul class="main-nav__list main-nav__list--desktop">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span class="main-nav__item-link">Новые поступления</span>
+          <li class="main-nav__item main-nav__item--new">
+            <a class="main-nav__item-link main-nav__item-link--new" href="#">
+              <span class="main-nav__item-link-span main-nav__item-link-span--new">Новые поступления</span>
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span class="main-nav__item-link">Распродажа</span>
+          <li class="main-nav__item main-nav__item--sale">
+            <a class="main-nav__item-link main-nav__item-link--sale" href="#">
+              <span class="main-nav__item-link-span main-nav__item-link-span--sale">Распродажа</span>
             </a>
           </li>
         </ul>
+        <p class="main-nav__item-paragraph">Бесплатная доставка по России</p>
       </div>
     </nav>
-    <p class="main-header__paragraph">Бесплатная доставка по России</p>
+
   </header>
   <main class="main-container">
 
@@ -228,25 +235,42 @@
     </section>
   </main>
   <footer class="page__footer">
-    <div class="page__footer-wrapper">
-      <div class="page__footer-social social">
-        <a class="social__link social__vk" href="#">
-
-          <span class="visually-hidden">В контакте</span>
-        </a>
-        <a class="social__link social__tg" href="#">
-
-          <span class="visually-hidden">Телеграм</span>
-        </a>
-        <a class="social__link social__yt" href="#">
-
-          <span class="visually-hidden">Ютуб</span>
+    <div class="page__footer-wrapper container">
+      <div class="page__footer-logo-wrapper">
+        <a class="page__footer-logo" href="index.html">
+          <svg class="page__footer-logo-img" width="102" height="34">
+            <use xlink:href="./img/stack.svg#logo-footer"></use>
+          </svg>
         </a>
       </div>
-      <a class="page__footer-html paragraph-main">Разработано
-
+      <div class="page__footer-social social">
+        <a class="social__link social__vk" href="#">
+          <svg class="social__vk-img" width="28" height="22">
+            <use xlink:href="./img/stack.svg#vkontakte"></use>
+          </svg>
+          <span class="visually-hidden">В контакте</span>
+        </a>
+        <a class="social__link social__yt" href="#">
+          <svg class="social__yt-img" width="28" height="22">
+            <use xlink:href="./img/stack.svg#youtube"></use>
+          </svg>
+          <span class="visually-hidden">Ютуб</span>
+        </a>
+        <a class="social__link social__tg" href="#">
+          <svg class="social__tg-img" width="28" height="22">
+            <use xlink:href="./img/stack.svg#telegram"></use>
+          </svg>
+          <span class="visually-hidden">Телеграм</span>
+        </a>
+      </div>
+      <div class="page__footer-html-wrapper">
+      <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+        <svg class="page__footer-html-img" width="27" height="34">
+          <use xlink:href="./img/stack.svg#htmlacademy"></use>
+        </svg>
         <span class="visually-hidden">Разработано html academy</span>
       </a>
+    </div>
     </div>
   </footer>
 

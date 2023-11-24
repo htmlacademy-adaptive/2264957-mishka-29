@@ -1,16 +1,45 @@
 .about-us {
   padding-bottom: 58px;
+
+  @include tablet {
+    padding-bottom: 0;
+    margin-bottom: 83px;
+  }
+
+  @include desktop {
+    margin-left: 175px;
+    margin-bottom: 90px;
+  }
 }
 
 .about-us__title {
   margin-top: 38px;
-  padding-bottom: 82px
+  padding-bottom: 82px;
+
+  @include tablet {
+    padding-bottom: 98px;
+  }
+
+  @include desktop {
+    padding-bottom: 96px;
+  }
 }
 
 .about-us__list {
   @include list;
   display: grid;
   row-gap: 83px;
+
+  @include tablet {
+    grid-template-columns: 265px 1fr;
+    column-gap: 70px;
+    row-gap: 110px;
+  }
+
+  @include desktop {
+    grid-template-columns: 265px 325px;
+    column-gap: 86px;
+  }
 }
 
 .about-us__item {
@@ -21,6 +50,21 @@
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+
+    &--clew {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    &--rocket {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+  }
 
   &::before {
     content: "";

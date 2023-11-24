@@ -11,6 +11,11 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .page__text {
@@ -21,6 +26,11 @@
   font-weight: 400;
   line-height: 24px;
   margin: 0;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .page__button {
@@ -38,6 +48,10 @@
   text-transform: uppercase;
   display: block;
 
+  @include tablet {
+    font-size: 17px;
+  }
+
   &:hover {
     background-color: $special-black;
     color: $white;
@@ -47,15 +61,56 @@
     background-color: $special-black;
     color: rgba(255, 255, 255, 0.3);
   }
+
+  &--modal {
+    color: $white;
+    text-transform: uppercase;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 52px;
+    background-color: $tiffani;
+    border: 2px solid $tiffani;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      background-color: $tiffani;
+    }
+
+    &:active {
+      color: $main-text;
+      background-color: $tiffani;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
 }
+
 
 .page__footer {
   background-color: $special-grey;
+
+  @include tablet {
+    padding: 52px 0 62px 0;
+  }
 }
 
 .page__footer-wrapper {
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    flex-direction: inherit;
+    align-items: center;
+  }
 }
 
 .page__footer-social {
@@ -73,6 +128,14 @@
     left: 0;
     bottom: 0;
     width: 100%;
+
+    @include tablet {
+      border-bottom: none;
+    }
+  }
+
+  @include tablet {
+    padding: 0;
   }
 }
 
@@ -83,11 +146,28 @@
   @include tablet {
     display: block;
   }
+
+  &:hover {
+    svg {
+      fill: $logo-htmlacademy-hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $logo-htmlacademy;
+      opacity: 0.3;
+    }
+  }
 }
 
 .page__footer-html-wrapper {
   margin: 0 auto;
   padding: 21px 0 32px 0;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .page__footer-html {
@@ -110,6 +190,10 @@
       opacity: 0.3;
     }
   }
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .page__footer-html-img {
@@ -125,17 +209,41 @@
   &::after {
     position: absolute;
     content: "";
-    mask-image: url("../img/stack.svg#zigzag-line");
+    mask-image: url("../img/icons/zigzag-line.svg");
     height: 6px;
     width: 100%;
     background-color: $special-grey;
+    background-repeat: no-repeat;
     bottom: -7px;
     left: 0;
+
+    @include tablet {
+      mask-image: url("../img/icons/zigzag-line-tablet.svg");
+      height: 17px;
+      left: 0;
+      bottom: -70px;
+    }
+
+    @include desktop {
+      mask-image: url("../img/icons/zigzag-line-desktop.svg");
+      height: 23px;
+      bottom: -90px;
+      left: 49px;
+      width: 91%;
+    }
   }
 
   &--reviews {
     &::after {
       bottom: -52px;
+
+      @include tablet {
+        bottom: -84px;
+      }
+
+      @include desktop {
+        bottom: -88px;
+      }
     }
   }
 }
