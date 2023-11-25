@@ -1,0 +1,155 @@
+.video {
+  margin-top: 30px;
+  margin-bottom: 58px;
+
+  @include tablet {
+    margin-bottom: 63px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 19px 0 33px 0;
+  border: 1px solid $catalog-item-border;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 44px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 683px 1fr;
+    column-gap: 79px;
+  }
+}
+
+.video__title {
+  position: relative;
+  color: $heading-text;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  padding: 0 13px 27px 91px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 36px 107px 24px 107px;
+  }
+
+  @include desktop {
+    padding: 96px 107px 0 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    mask-image: url("../img/stack.svg#video");
+    width: 32px;
+    height: 22px;
+    left: 13%;
+    top: 13px;
+    background-color: $tiffani;
+
+    @include tablet {
+      left: 6%;
+      top: 33px;
+    }
+
+    @include desktop {
+      left: 0;
+      top: 46px;
+    }
+  }
+}
+
+.video__wrapper-picture {
+  position: relative;
+
+  @include tablet {
+    order: -1;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+}
+
+.video__picture-button {
+  position: absolute;
+  border: none;
+  background-image: url("../img/catalog/play.png");
+  background-color: transparent;
+  width: 100px;
+  height: 77px;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video__description {
+  color: $main-text;
+  font-family: inherit;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 29px 30px 41px 34px;
+  margin: 0;
+
+  @include tablet {
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 46px 41px 40px;
+  }
+
+  @include desktop {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 0 46px 41px 0;
+  }
+}
+
+.video__button {
+  width: 192px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 18px 11px;
+  line-height: 16px;
+  height: 52px;
+
+  @include tablet {
+    width: 584px;
+  }
+
+  @include desktop {
+    width: 230px;
+    margin: 0;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+
+.video__item-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+
+  @include tablet {
+    height: 455px;
+  }
+}

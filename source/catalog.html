@@ -18,7 +18,7 @@
 
 <body class="page__body no-js">
 
-  <header class="main-header">
+  <header class="main-header main-header--catalog">
     <!-- Навигация -->
     <div class="main-header__wrapper container container--mobile">
       <a class="main-header__logo" href="index.html">
@@ -36,7 +36,8 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list main-nav__list--catalog">
           <li class="main-nav__item main-nav__item--catalog">
-            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current" href="catalog.html">
+            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current"
+              href="catalog.html">
               Каталог товаров
             </a>
           </li>
@@ -80,91 +81,103 @@
     <h1 class="visually-hidden">Мишка-интернет магазин вещей ручной работы</h1>
     <section class="catalog">
       <div class="catalog__title-wrapper">
-      <h2 class="catalog__title">Каталог товаров</h2>
-    </div>
-    <ul class="catalog__list">
-      <li class="catalog__item">
-        <a class="catalog__item-picture">
-        <picture class="catalog__item-picture">
-          <source  srcset="img/catalog/rabbit-desktop.jpg 1x, img/catalog/rabbit-desktop@2x.jpg 2x" width="316" height="462"
-            media="(min-width: 1150px)">
-          <source  srcset="img/catalog/rabbit-tablet.jpg 1x, img/catalog/rabbit-dtablet@2x.jpg 2x" width="334" height="334"
-            media="(min-width: 768px)">
-          <img class="catalog__item-img" src="img/catalog/rabbit-mobile.jpg"
-          srcset="img/catalog/rabbit-mobile@2x.jpg 2x" width="260" height="195" alt="#">
-        </picture>
-        </a>
-        <div class="catalog__item-wrapper catalog__item-wrapper--name">
-          <a class="catalog__item-title" href="#">Зайчик-попрыгайчик</a>
+        <h2 class="catalog__title">Каталог товаров</h2>
+      </div>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <a class="catalog__item-picture">
+            <picture class="catalog__item-picture">
+              <source srcset="img/catalog/rabbit-desktop.jpg 1x, img/catalog/rabbit-desktop@2x.jpg 2x" width="316"
+                height="462" media="(min-width: 1150px)">
+              <source srcset="img/catalog/rabbit-tablet.jpg 1x, img/catalog/rabbit-tablet@2x.jpg 2x" width="334"
+                height="334" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="img/catalog/rabbit-mobile.jpg"
+                srcset="img/catalog/rabbit-mobile@2x.jpg 2x" width="260" height="195" alt="#">
+            </picture>
+          </a>
+          <div class="catalog__item-wrapper-text">
+          <div class="catalog__item-wrapper catalog__item-wrapper--name">
+            <a class="catalog__item-title" href="#">Зайчик-попрыгайчик</a>
             <p class="catalog__item-info">Рост 30 см, вес 200 г</p>
+          </div>
+          <div class="catalog__item-wrapper catalog__item-wrapper--price">
+            <p class="catalog__item-price">1 200 руб.</p>
+            <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в
+                корзину</span></button>
+          </div>
         </div>
-        <div class="catalog__item-wrapper catalog__item-wrapper--price">
-          <p class="catalog__item-price">1 200 руб.</p>
-          <button class="catalog__item-button" type="button"><span
-            class="visually-hidden">Добавить в корзину</span></button>
-        </div>
-      </li>
-      <li class="catalog__item">
-        <a class="catalog__item-picture">
-        <picture class="catalog__item-picture">
-          <source  srcset="img/catalog/basket-desktop.jpg 1x, img/catalog/basket-desktop@2x.jpg 2x" width="316" height="462"
-            media="(min-width: 1150px)">
-          <source  srcset="img/catalog/basket-tablet.jpg 1x, img/catalog/basket-tablet@2x.jpg 2x" width="334" height="334"
-            media="(min-width: 768px)">
-          <img class="catalog__item-img" src="img/catalog/basket-mobile.jpg"
-          srcset="img/catalog/basket-mobile@2x.jpg 2x" width="260" height="195" alt="#">
-        </picture>
-        </a>
-        <div class="catalog__item-wrapper">
-          <a class="catalog__item-title" href="#">Корзинка для белья</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture">
+            <picture class="catalog__item-picture">
+              <source srcset="img/catalog/basket-desktop.jpg 1x, img/catalog/basket-desktop@2x.jpg 2x" width="316"
+                height="462" media="(min-width: 1150px)">
+              <source srcset="img/catalog/basket-tablet.jpg 1x, img/catalog/basket-tablet@2x.jpg 2x" width="334"
+                height="334" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="img/catalog/basket-mobile.jpg"
+                srcset="img/catalog/basket-mobile@2x.jpg 2x" width="260" height="195" alt="#">
+            </picture>
+          </a>
+          <div class="catalog__item-wrapper-text">
+          <div class="catalog__item-wrapper catalog__item-wrapper--name">
+            <a class="catalog__item-title" href="#">Корзинка для белья</a>
             <p class="catalog__item-info">Диаметр 15 см, высота 10 см</p>
-        </div>
-        <div class="catalog__item-wrapper catalog__item-wrapper--price">
-          <p class="catalog__item-price">690 руб.</p>
-          <button class="catalog__item-button" type="button"><span
-            class="visually-hidden">Добавить в корзину</span></button>
-        </div>
-      </li>
-      <li class="catalog__item">
-        <a class="catalog__item-picture">
-        <picture class="catalog__item-picture">
-          <source  srcset="img/catalog/bigbasket-desktop.jpg 1x, img/catalog/bigbasket-desktop@2x.jpg 2x" width="316" height="462"
-            media="(min-width: 1150px)">
-          <source  srcset="img/catalog/bigbasket-tablet.jpg 1x, img/catalog/bigbasket-tablet@2x.jpg 2x" width="334" height="334"
-            media="(min-width: 768px)">
-          <img class="catalog__item-img" src="img/catalog/bigbasket-mobile.jpg"
-          srcset="img/catalog/bigbasket-mobile@2x.jpg 2x" width="260" height="195" alt="#">
-        </picture>
-        </a>
-        <div class="catalog__item-wrapper">
-          <a class="catalog__item-title" href="#">Большая корзинка для игрушек</a>
+          </div>
+          <div class="catalog__item-wrapper catalog__item-wrapper--price">
+            <p class="catalog__item-price">690 руб.</p>
+            <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в
+                корзину</span></button>
+          </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture">
+            <picture class="catalog__item-picture">
+              <source srcset="img/catalog/bigbasket-desktop.jpg 1x, img/catalog/bigbasket-desktop@2x.jpg 2x" width="316"
+                height="462" media="(min-width: 1150px)">
+              <source srcset="img/catalog/bigbasket-tablet.jpg 1x, img/catalog/bigbasket-tablet@2x.jpg 2x" width="334"
+                height="334" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="img/catalog/bigbasket-mobile.jpg"
+                srcset="img/catalog/bigbasket-mobile@2x.jpg 2x" width="260" height="195" alt="#">
+            </picture>
+          </a>
+          <div class="catalog__item-wrapper-text">
+          <div class="catalog__item-wrapper catalog__item-wrapper--name catalog__item-wrapper--big">
+            <a class="catalog__item-title" href="#">Большая корзинка для&nbspигрушек</a>
             <p class="catalog__item-info">Диаметр 30 см, высота 30 см</p>
-        </div>
-        <div class="catalog__item-wrapper catalog__item-wrapper--price">
-          <p class="catalog__item-price">1 500 руб.</p>
-          <button class="catalog__item-button" type="button"><span
-            class="visually-hidden">Добавить в корзину</span></button>
-        </div>
-      </li>
-    </ul>
+          </div>
+          <div class="catalog__item-wrapper catalog__item-wrapper--price">
+            <p class="catalog__item-price">1 500 руб.</p>
+            <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в
+                корзину</span></button>
+          </div>
+          </div>
+        </li>
+      </ul>
 
 
     </section>
 
-    <section class="video">
-<h2 class="video__title">Процесс производства</h2>
-<div class="video__wrapper">
-  <picture class="video__picture">
-    <source  srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" width="682" height="455"
-      media="(min-width: 1150px)">
-    <source  srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x" width="668" height="455"
-      media="(min-width: 768px)">
-    <img class="catalog__item-img" src="img/catalog/video-mobile.jpg"
-    srcset="img/catalog/video-mobile@2x.jpg 2x" width="260" height="150" alt="#">
-  </picture>
-</div>
-<p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-<a class="video__button" href="form.html">СДелать заказ</a>
+    <section class="video container">
+      <div class="video-wrapper">
+      <h2 class="video__title">Процесс производства</h2>
+      <div class="video__wrapper-picture">
+        <picture class="video__picture">
+          <source srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" width="682"
+            height="455" media="(min-width: 1150px)">
+          <source srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x" width="668" height="455"
+            media="(min-width: 768px)">
+          <img class="video__item-img" src="img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x"
+            width="260" height="150" alt="#">
+        </picture>
+        <button class="video__picture-button" type="button">
+          <span class="visually-hidden">Запустить видео</span>
+        </button>
+      </div>
+      <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+        появляются наши товары.</p>
+      <a class="video__button page__button" href="form.html">СДелать заказ</a>
+    </div>
     </section>
   </main>
 
@@ -198,15 +211,54 @@
         </a>
       </div>
       <div class="page__footer-html-wrapper">
-      <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-        <svg class="page__footer-html-img" width="27" height="34">
-          <use xlink:href="./img/stack.svg#htmlacademy"></use>
-        </svg>
-        <span class="visually-hidden">Разработано html academy</span>
-      </a>
-    </div>
+        <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+          <svg class="page__footer-html-img" width="27" height="34">
+            <use xlink:href="./img/stack.svg#htmlacademy"></use>
+          </svg>
+          <span class="visually-hidden">Разработано html academy</span>
+        </a>
+      </div>
     </div>
   </footer>
+
+  <section class="modal">
+    <div class="modal__order-message order-message">
+      <h2 class="order-message__heading">Добавить&nbsp;<br>в корзину</h2>
+
+      <form class="order-message__form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="order-message__description">Выберите размер:</p>
+
+        <ul class="order-message__list">
+          <li class="order-message__item">
+            <label class="order-message__label">
+              <input class="visually-hidden order-message__control" type="radio" name="size" value="S" checked>
+
+              <span class="order-message__control-description">S</span>
+            </label>
+          </li>
+
+          <li class="order-message__item">
+            <label class="order-message__label">
+              <input class="visually-hidden order-message__control" type="radio" name="size" value="M">
+
+              <span class="order-message__control-description">M</span>
+            </label>
+          </li>
+
+          <li class="order-message__item">
+            <label class="order-message__label">
+              <input class="visually-hidden order-message__control" type="radio" name="size" value="L">
+
+              <span class="order-message__control-description">L</span>
+            </label>
+          </li>
+        </ul>
+
+        <button class="order-message__button page__button page__button--modal" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
+
 
 
 </body>

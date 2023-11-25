@@ -21,8 +21,8 @@ if (document.querySelector('.modal') !==null) {
     }
   }
 
-  if (document.querySelector('.manufacturing__link') !==null) {
-    const catalogOrderAdditionalLink = document.querySelector('.manufacturing__link');
+  if (document.querySelector('.video__button') !==null) {
+    const catalogOrderAdditionalLink = document.querySelector('.video__button');
 
     catalogOrderAdditionalLink.addEventListener('click', (evt) => {
       evt.preventDefault();
