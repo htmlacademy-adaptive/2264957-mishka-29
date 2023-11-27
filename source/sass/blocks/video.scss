@@ -8,6 +8,7 @@
 
   @include desktop {
     margin-top: 0;
+    margin-bottom: 101px;
   }
 }
 
@@ -26,6 +27,7 @@
     display: grid;
     grid-template-columns: 683px 1fr;
     column-gap: 79px;
+    padding-bottom: 0;
   }
 }
 
@@ -37,19 +39,21 @@
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  margin: 0;
-  padding: 0 13px 27px 91px;
+  margin: 0 0 27px 0;
+  padding: 0 13px 0 91px;
 
   @include tablet {
     font-size: 20px;
     line-height: 24px;
-    padding: 36px 107px 24px 107px;
+    padding: 0 107px 0 107px;
+    margin: 42px 0 24px 0;
   }
 
   @include desktop {
-    padding: 96px 107px 0 0;
+    padding: 96px 107px 27px 0;
     grid-column: 2/3;
     grid-row: 1/2;
+    margin: 0;
   }
 
   &::before {
@@ -58,18 +62,18 @@
     mask-image: url("../img/stack.svg#video");
     width: 32px;
     height: 22px;
-    left: 13%;
-    top: 13px;
+    left: 33px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: $tiffani;
 
     @include tablet {
-      left: 6%;
-      top: 33px;
+      left: 42px;
     }
 
     @include desktop {
       left: 0;
-      top: 46px;
+      top: 32%;
     }
   }
 }
@@ -107,7 +111,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  padding: 29px 30px 41px 34px;
+  padding: 35px 30px 41px 34px;
   margin: 0;
 
   @include tablet {
@@ -119,7 +123,7 @@
   @include desktop {
     grid-column: 2/3;
     grid-row: 2/3;
-    padding: 0 46px 41px 0;
+    padding: 0 46px 51px 0;
   }
 }
 
@@ -137,7 +141,7 @@
 
   @include desktop {
     width: 230px;
-    margin: 0;
+    margin: 0 0 61px 0;
     grid-column: 2/3;
     grid-row: 3/4;
   }

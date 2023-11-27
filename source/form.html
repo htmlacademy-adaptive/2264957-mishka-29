@@ -79,21 +79,21 @@
 
     <h1 class="visually-hidden">Мишка-интернет магазин вещей ручной работы</h1>
 
-    <section class="hero">
-      <h2 class="hero__title">Вязание на заказ</h2>
-      <p class="hero__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
-        свяжемся с вами, чтобы уточнить детали.</p>
+    <section class="hero-inner">
+      <div class="hero-inner__wrapper hero-inner__wrapper--form">
+      <h2 class="hero-inner__title">Вязание на заказ</h2>
+      </div>
     </section>
     <section class="order">
       <h2 class="visually-hidden">Форма заказа товаров</h2>
+      <p class="order__description container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы уточнить детали.</p>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
         <!-- Радиокнопки выбора -->
-        <fieldset class="form__fieldset">
-          <div class="form__wrapper form__line-mode">
+        <fieldset class="form__fieldset container">
             <h3 class="form__title form__title--radio">ТИП</h3>
-          </div>
           <ul class="form__list form__list-control">
             <li class="form__item form__item-control form__item-control--radio">
               <label class="form__control">
@@ -106,7 +106,7 @@
             <li class="form__item form__item-control form__item-control--radio">
               <label class="form__control">
                 <input class="form__control-input visually-hidden" type="radio" name="programs-group" value="bad">
-                <span class="form__control-mark form__control-mark-radio"></span>
+                <span class="form__control-mark form__control-mark--radio"></span>
                 <span class="form__control-label">Детская игрушка</span>
               </label>
             </li>

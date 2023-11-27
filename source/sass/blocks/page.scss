@@ -163,7 +163,7 @@
 
 .page__footer-html-wrapper {
   margin: 0 auto;
-  padding: 21px 0 32px 0;
+  padding: 27px 0 32px 0;
 
   @include tablet {
     padding: 0;
@@ -171,7 +171,7 @@
 }
 
 .page__footer-html {
-  color: $main-text;
+  color: $black;
   font-family: inherit;
   font-size: 19px;
   font-style: normal;
@@ -193,6 +193,7 @@
 
   @include tablet {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -200,6 +201,10 @@
   margin-left: 27px;
   vertical-align: middle;
   fill: $logo-htmlacademy;
+
+  @include tablet {
+    vertical-align: bottom;
+  }
 }
 
 .page__line {
@@ -227,7 +232,7 @@
     @include desktop {
       mask-image: url("../img/icons/zigzag-line-desktop.svg");
       height: 23px;
-      bottom: -90px;
+      bottom: -96px;
       left: 49px;
       width: 91%;
     }
