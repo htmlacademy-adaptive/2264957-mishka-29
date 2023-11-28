@@ -63,6 +63,7 @@
 }
 
 .hero__menu {
+  position: relative;
 
   &::after {
     @include tablet {
@@ -73,13 +74,13 @@
       height: 24px;
       background-color: $white;
       left: 0;
-      bottom: -160px;
+      bottom: 0;
     }
 
     @include desktop {
       mask-image: url("../img/icons/zigzag-fill-desktop.svg");
       height: 34px;
-      bottom: -165px;
+      bottom: 0;
     }
   }
 }
