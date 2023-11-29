@@ -50,6 +50,10 @@
 
   &--tel {
     margin-bottom: 3px;
+
+    @include tablet {
+      padding-top: 17px;
+    }
   }
 
   &--mail {
@@ -59,10 +63,18 @@
     }
 
     margin-bottom: 3px;
+
+    @include tablet {
+      padding-top: 17px;
+    }
   }
 
   &--add {
     margin-bottom: 21px;
+
+    @include tablet {
+      padding-top: 19px;
+    }
   }
 }
 
@@ -72,12 +84,6 @@
   border: none;
   padding-top: 0;
   padding-bottom: 0;
-
-  @include tablet {
-    display: grid;
-    grid-template-columns: 88px 1fr;
-    gap: 82px;
-  }
 
   &--radio {
     padding-bottom: 30px;
@@ -103,22 +109,40 @@
     padding-bottom: 35px;
 
     @include tablet {
-      gap: 79px;
+      padding-bottom: 50px;
     }
   }
 
   &--tel {
     padding: 0;
     padding-bottom: 36px;
+
+    @include tablet {
+      background-color: $form-secondary-background;
+      padding-top: 50px;
+      padding-bottom: 24px;
+    }
   }
 
   &--mail {
     padding: 0;
     padding-bottom: 36px;
+
+    @include tablet {
+      background-color: $form-secondary-background;
+      padding-bottom: 50px;
+    }
   }
 
   &--add {
-    padding-bottom: 29px;
+    @include tablet {
+      margin-top: 50px;
+      padding-bottom: 45px;
+    }
+
+    @include desktop {
+      padding-bottom: 41px;
+    }
   }
 }
 
@@ -127,6 +151,20 @@
     display: grid;
     grid-template-columns: 88px 1fr;
     gap: 81px;
+
+    @include desktop {
+      gap: 27px;
+    }
+
+    &--input {
+      @include tablet {
+        gap: 79px;
+      }
+
+      @include tablet {
+        gap: 29px;
+      }
+    }
   }
 }
 
@@ -134,13 +172,17 @@
   @include list;
 
   &--checkbox {
-  @include tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 86px;
-    row-gap: 32px;
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 21px;
+      row-gap: 32px;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 289px;
+    }
   }
-}
 }
 
 .form__item {
@@ -151,7 +193,7 @@
     display: block;
     mask-repeat: no-repeat;
     content: "";
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $black;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -159,6 +201,10 @@
   &--name {
     &:not(:last-child) {
       margin-bottom: 21px;
+
+      @include tablet {
+        margin-bottom: 24px;
+      }
     }
 
     @include tablet {
@@ -174,6 +220,15 @@
       width: 25px;
       height: 24px;
       right: 7px;
+
+      @include tablet {
+        right: 28px;
+        top: 44%;
+      }
+
+      @include desktop {
+        right: 7px;
+      }
     }
   }
 
@@ -183,6 +238,14 @@
       right: 3px;
       width: 32px;
       height: 21px;
+
+      @include tablet {
+        right: 23px;
+      }
+
+      @include desktop {
+        right: 3px;
+      }
     }
   }
 }
@@ -194,6 +257,10 @@
 
       @include tablet {
         margin-bottom: 36px;
+      }
+
+      @include desktop {
+        margin-bottom: 31px;
       }
     }
   }
@@ -217,13 +284,8 @@
   font-weight: 700;
   line-height: 18px;
 
-  &--accessory {
+  &-accessory {
     display: block;
-    height: 35px;
-
-    @include tablet {
-      height: inherit;
-    }
   }
 
   @include tablet {
@@ -266,6 +328,10 @@
   @include tablet {
     width: 52px;
     height: 52px;
+  }
+
+  @include desktop {
+    top: 46%;
   }
 
   &--radio {
@@ -351,31 +417,77 @@
   @include tablet {
     font-size: 19px;
     line-height: 18px;
-    padding: 17x 17px 17px 18px;
+    padding: 17px 17px 17px 18px;
     height: 52px;
   }
 
   &--textarea {
     border: 2px solid $main-text;
     padding: 17px 17px 89px 17px;
+
+    @include tablet {
+      padding: 15px 17px 124px 17px;
+    }
+
+    @include desktop {
+      padding: 15px 17px 124px 14px;
+    }
   }
 
   &--name {
-    padding: 16px 7px 16px 18px;
+    @include tablet {
+      padding: 16px 7px 16px 18px;
+    }
+
+    @include desktop {
+      padding: 16px 7px 16px 16px;
+    }
+  }
+
+  &--contact {
+    @include tablet {
+      padding: 14px 7px 20px 18px;
+    }
+
+    @include tablet {
+      padding: 14px 7px 20px 16px;
+    }
+  }
+}
+
+.form__fieldset-wrapper-button {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 .form__legend {
   display: block;
   color: $main-text;
-  font-family: Open Sans;
+  font-family: inherit;
   font-size: 14px;
   line-height: 16px;
   margin-top: 8px;
+  padding-bottom: 28px;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .form__button {
   padding: 18px 37px;
   font-size: 17px;
   height: 52px;
+
+  @include tablet {
+    width: 230px;
+    padding: 16px 20px;
+    order: -1;
+  }
 }

@@ -1,5 +1,9 @@
 .order {
   margin-bottom: 55px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
 }
 
 .order__description {
@@ -14,5 +18,10 @@
     font-size: 17px;
     line-height: 30px;
     margin-bottom: 69px;
+  }
+
+  @include desktop {
+    padding: 0 225px;
+    margin-bottom: 68px;
   }
 }

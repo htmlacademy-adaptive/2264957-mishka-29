@@ -24,14 +24,27 @@
     padding-bottom: 114px;
 
     &::after {
-      mask-image: url("../../img/icons/zigzag-fill-desktop.svg");
+      mask-image: url("../img/icons/zigzag-fill-desktop.svg");
       height: 34px;
     }
   }
 
   &--form {
+    margin-bottom: 16px;
+
+    @include tablet {
     margin-bottom: 54px;
   }
+
+  @include desktop {
+    margin-bottom: 98px;
+
+    &::after {
+      mask-image: url("../img/icons/zigzag-fill-form.svg");
+      height: 34px;
+    }
+  }
+}
 }
 
 .hero-inner__title {

@@ -67,4 +67,22 @@ a {
       padding-right: 49px;
     }
   }
+
+  &--form {
+    @include desktop {
+      padding: 0 225px 0 110px;
+    }
+  }
+
+  &--checkbox {
+    @include desktop {
+      padding: 0 110px;
+    }
+  }
+
+  &--formbutton {
+    @include desktop {
+      padding: 0 225px;
+    }
+  }
 }

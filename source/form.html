@@ -94,7 +94,8 @@
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
         <!-- Радиокнопки выбора -->
-        <fieldset class="form__fieldset form__fieldset--radio container">
+        <fieldset class="form__fieldset form__fieldset--radio container container--form">
+          <div class="form__fieldset-wrapper">
           <h3 class="form__title form__title--radio">ТИП</h3>
           <ul class="form__list form__list-control">
             <li class="form__item form__item-control form__item-control--radio">
@@ -113,11 +114,12 @@
               </label>
             </li>
           </ul>
+          </div>
         </fieldset>
 
         <!-- Выбор цвета чекбокс -->
         <fieldset class="form__fieldset form__fieldset--checkbox">
-          <div class="form__fieldset-wrapper container">
+          <div class="form__fieldset-wrapper container container--checkbox">
             <h3 class="form__title form__title--checkbox">ЦВет</h3>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item-control form__item-control--checkbox">
@@ -166,7 +168,8 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--name container">
+        <fieldset class="form__fieldset form__fieldset--name container container--form">
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--input">
           <h3 class="form__title form__title--name">ФИО</h3>
           <ul class="form__list">
 
@@ -192,42 +195,46 @@
             </li>
 
           </ul>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--tel">
-          <div class="form__fieldset-wrapper container">
+          <div class="form__fieldset-wrapper
+          form__fieldset-wrapper--input container container--form">
             <h3 class="form__title form__title--tel">тел</h3>
             <div class="form__item form__item--tel">
               <label class="form__about-item-name visually-hidden" for="fild-about-tel">
                 Контактный телефон:</label>
-              <input class="form__about-input-tel form__input-all" type="tel" id="fild-about-tel" name="fild-about-tel"
+              <input class="form__input-all form__input-all--contact" type="tel" id="fild-about-tel" name="fild-about-tel"
                 placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--mail">
-          <div class="form__fieldset-wrapper container">
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form">
             <h3 class="form__title form__title--mail">E-mail</h3>
             <div class="form__item form__item--mail">
               <label class="form__item-name visually-hidden" for="fild-about-mail">
                 Ваш Email*</label>
-              <input class="form__input-tel form__input-all" type="email" id="fild-about-mail" name="fild-about-tel"
+              <input class="form__input-all form__input-all--contact" type="email" id="fild-about-mail" name="fild-about-tel"
                 placeholder="Ваш Email*" required>
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--add container">
+        <fieldset class="form__fieldset form__fieldset--add container container--form">
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--input">
           <h3 class="form__title form__title--add">Доп</h3>
           <div class="form__wrapper-input">
             <textarea class="form__input-all form__input-all--textarea" id="fild-about-comment"
               name="fild-about-comment" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
           </div>
+          </div>
+        </fieldset>
+        <div class="form__fieldset-wrapper-button container container--formbutton">
           <small class="form__legend">
             *Поля обязательны для заполнения
           </small>
-        </fieldset>
-        <div class="form__fieldset-wrapper container">
           <button class="form__button page__button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
         </div>
       </form>
