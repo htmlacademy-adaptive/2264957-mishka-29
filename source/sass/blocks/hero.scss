@@ -59,6 +59,10 @@
     padding-right: 49px;
   }
 
+  @include desktop {
+    margin: 0 auto;
+  }
+
 
 }
 
@@ -74,13 +78,13 @@
       height: 24px;
       background-color: $white;
       left: 0;
-      bottom: 0;
+      bottom: -13px;
     }
 
     @include desktop {
       mask-image: url("../img/icons/zigzag-fill-desktop.svg");
       height: 34px;
-      bottom: 0;
+      bottom: -16px;
     }
   }
 }

@@ -126,7 +126,7 @@
     position: absolute;
     border-bottom: 1px solid $footer-border;
     left: 0;
-    bottom: 0;
+    bottom: -4px;
     width: 100%;
 
     @include tablet {

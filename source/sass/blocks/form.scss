@@ -9,15 +9,19 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    align-items: flex-start;
+  }
 
   &::after {
-    position: absolute;
     content: "";
-    border: 1px solid $form-title-border;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 60px;
-    width: 77%;
+    background-color: $form-title-border;
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 20px;
 
     @include tablet {
       display: none;
@@ -33,7 +37,7 @@
   }
 
   &--checkbox {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 
     @include tablet {
       padding-top: 12px;
@@ -57,11 +61,6 @@
   }
 
   &--mail {
-    &::after {
-      left: 78px;
-      width: 70%;
-    }
-
     margin-bottom: 3px;
 
     @include tablet {
@@ -80,27 +79,26 @@
 
 .form__fieldset {
   position: relative;
-  margin: 0;
   border: none;
   padding-top: 0;
   padding-bottom: 0;
 
   &--radio {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 
     @include tablet {
-      padding-bottom: 53px;
+      padding-bottom: 57px;
     }
   }
 
   &--checkbox {
     padding: 0;
-    padding-bottom: 30px;
+    padding-bottom: 33px;
 
     @include tablet {
       background-color: $form-secondary-background;
       padding-top: 54px;
-      padding-bottom: 54px;
+      padding-bottom: 56px;
       margin-bottom: 50px;
     }
   }
@@ -161,7 +159,7 @@
         gap: 79px;
       }
 
-      @include tablet {
+      @include desktop {
         gap: 29px;
       }
     }
@@ -176,7 +174,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 21px;
-      row-gap: 32px;
+      row-gap: 39px;
     }
 
     @include desktop {
@@ -196,6 +194,10 @@
     background-color: $black;
     top: 50%;
     transform: translateY(-50%);
+
+    &:hover {
+      background-color: red;
+    }
   }
 
   &--name {
@@ -220,6 +222,10 @@
       width: 25px;
       height: 24px;
       right: 7px;
+
+      &:hover {
+        background-color: red;
+      }
 
       @include tablet {
         right: 28px;
@@ -256,18 +262,18 @@
       margin-bottom: 4px;
 
       @include tablet {
-        margin-bottom: 36px;
+        margin-bottom: 39px;
       }
 
       @include desktop {
-        margin-bottom: 31px;
+        margin-bottom: 41px;
       }
     }
   }
 
   &--checkbox {
     &:not(:last-child) {
-      margin-bottom: 17px;
+      margin-bottom: 23px;
 
       @include tablet {
         margin-bottom: 0;
@@ -283,10 +289,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
-
-  &-accessory {
-    display: block;
-  }
+  display: block;
 
   @include tablet {
     font-size: 19px;
@@ -314,14 +317,18 @@
       padding-left: 81px;
     }
   }
+
+  @include desktop {
+    padding-left: 80px;
+  }
 }
 
 .form__control-mark {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border: 2px solid $special-black;
   transform: translateY(-50%);
 
@@ -346,7 +353,7 @@
   }
 }
 
-.form__control-input[type="radio"]:checked+.form__control-mark--radio::after {
+.form__control-input[type="radio"]:checked+ .form__control-mark--radio::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -358,11 +365,12 @@
   content: "";
 }
 
-.form__control-input[type="radio"]:checked+.form__control-mark--radio:active::after {
-  background-color: rgba(51, 51, 51, 0.3);
+
+.form__control-input:focus + .form__control-mark--radio {
+  outline: 1px auto $link-text-active;
 }
 
-.form__control-input[type="checkbox"]:checked+.form__control-mark::after {
+.form__control-input[type="checkbox"]:checked+ .form__control-mark::after {
   position: absolute;
   mask-image: url("../img/stack.svg#tick");
   background-repeat: no-repeat;
@@ -382,8 +390,8 @@
   }
 }
 
-.form__control-input[type="checkbox"]:checked+.form__control-mark:active:after {
-  background-color: rgba(51, 51, 51, 0.3);
+.form__control-input:focus + .form__control-mark {
+  outline: 1px auto $link-text-active;
 }
 
 .form__item-name {
@@ -405,9 +413,9 @@
 .form__input-all {
   border: none;
   background-color: inherit;
-  box-shadow: 0px -2px 0px 0px #000 inset;
+  box-shadow: 0px -2px 0px 0px $black inset;
   padding: 17px 7px 17px 0;
-  color: $link-text-active;
+  color: $heading-text;
   font-family: inherit;
   font-size: 17px;
   font-style: normal;
@@ -421,6 +429,19 @@
     height: 52px;
   }
 
+  &:hover {
+    box-shadow: 0px -2px 0px 0px $special-sea inset;
+
+    .form__item::after {
+      background-color: $special-sea;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px -2px 0px 0px $special-sea inset;
+  }
+
   &--textarea {
     border: 2px solid $main-text;
     padding: 17px 17px 89px 17px;
@@ -431,6 +452,14 @@
 
     @include desktop {
       padding: 15px 17px 124px 14px;
+    }
+
+    &:hover {
+      border: 2px solid $special-sea;
+    }
+
+    &:focus {
+      border: 2px solid $special-sea;
     }
   }
 
@@ -452,6 +481,10 @@
     @include tablet {
       padding: 14px 7px 20px 16px;
     }
+  }
+
+  &::placeholder {
+    opacity: 1;
   }
 }
 
