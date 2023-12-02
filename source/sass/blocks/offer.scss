@@ -192,9 +192,11 @@
 
   @include tablet {
     height: 404px;
+    width: 334px;
   }
 
   @include desktop {
     height: 636px;
+    width: 525px;
   }
 }

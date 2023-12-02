@@ -203,10 +203,12 @@
 
   @include tablet {
     height: 457px;
-    top: 48px
+    top: 48px;
   }
 
   @include desktop {
     top: 0;
+    height: 454px;
+    width: 320px;
   }
 }
