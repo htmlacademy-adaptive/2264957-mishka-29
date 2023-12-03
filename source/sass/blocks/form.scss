@@ -186,6 +186,12 @@
 .form__item {
   position: relative;
 
+  &:hover {
+    .form__item::after {
+      background-color: red;
+    }
+  }
+
   &::after {
     position: absolute;
     display: block;
@@ -194,10 +200,6 @@
     background-color: $black;
     top: 50%;
     transform: translateY(-50%);
-
-    &:hover {
-      background-color: red;
-    }
   }
 
   &--name {
@@ -353,7 +355,7 @@
   }
 }
 
-.form__control-input[type="radio"]:checked+ .form__control-mark--radio::after {
+.form__control-input[type="radio"]:checked + .form__control-mark--radio::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -370,7 +372,7 @@
   outline: 1px auto $link-text-active;
 }
 
-.form__control-input[type="checkbox"]:checked+ .form__control-mark::after {
+.form__control-input[type="checkbox"]:checked + .form__control-mark::after {
   position: absolute;
   mask-image: url("../img/stack.svg#tick");
   background-repeat: no-repeat;
@@ -413,7 +415,7 @@
 .form__input-all {
   border: none;
   background-color: inherit;
-  box-shadow: 0px -2px 0px 0px $black inset;
+  box-shadow: 0 -2px 0 0 $black inset;
   padding: 17px 7px 17px 0;
   color: $heading-text;
   font-family: inherit;
@@ -430,7 +432,7 @@
   }
 
   &:hover {
-    box-shadow: 0px -2px 0px 0px $special-sea inset;
+    box-shadow: 0 -2px 0 0 $special-sea inset;
 
     .form__item::after {
       background-color: $special-sea;
@@ -439,19 +441,21 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0px -2px 0px 0px $special-sea inset;
+    box-shadow: 0 -2px 0 0 $special-sea inset;
   }
 
   &--textarea {
     border: 2px solid $main-text;
-    padding: 17px 17px 89px 17px;
+    padding: 17px 17px 17px 17px;
+    box-shadow: none;
+    height: 142px;
 
     @include tablet {
-      padding: 15px 17px 124px 17px;
+      padding: 15px 17px 17px 17px;
     }
 
     @include desktop {
-      padding: 15px 17px 124px 14px;
+      padding: 15px 17px 17px 14px;
     }
 
     &:hover {

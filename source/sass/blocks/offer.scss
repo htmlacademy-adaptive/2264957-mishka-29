@@ -6,7 +6,7 @@
     margin-bottom: 126px;
   }
 
-  @include  desktop {
+  @include desktop {
     margin-bottom: 164px;
   }
 }
@@ -163,10 +163,10 @@
 
 .offer__img-wrapper {
   @include tablet {
-  grid-column: 2/3;
-  grid-row: 2/5;
-  padding-top: 5px;
-  align-self: self-end;
+    grid-column: 2/3;
+    grid-row: 2/5;
+    padding-top: 5px;
+    align-self: self-end;
   }
 
   @include desktop {

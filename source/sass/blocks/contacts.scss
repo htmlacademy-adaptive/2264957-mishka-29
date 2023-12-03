@@ -14,43 +14,43 @@
   @include tablet {
     padding-bottom: 49px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 4px;
-    height: 81px;
-    background-color: $black-black;
-    top: -23px;
-    right: 96px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 4px;
+      height: 81px;
+      background-color: $black-black;
+      top: -23px;
+      right: 96px;
 
-    @include desktop {
-      left: -62px;
-      top: -17px;
+      @include desktop {
+        left: -62px;
+        top: -17px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      border-width: 19px 39px;
+      border-color: transparent transparent transparent $tiffani;
+      border-style: solid;
+      right: 15px;
+      top: -19px;
+
+      @include desktop {
+        top: -13px;
+        left: -54px;
+      }
     }
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    border-width: 19px 39px;
-    border-color: transparent transparent transparent $tiffani;
-    border-style: solid;
-    right: 15px;
-    top: -19px;
-
-    @include desktop {
-      top: -13px;
-      left: -54px;
-    }
+  @include desktop {
+    margin-left: 175px;
+    margin-top: 79px;
+    padding-bottom: 0;
   }
-}
-
-@include desktop {
-  margin-left: 175px;
-  margin-top: 79px;
-  padding-bottom: 0;
-}
 }
 
 .contacts__wrapper {
@@ -168,9 +168,9 @@
 
 .contacts__wrapper-wrap {
   @include tablet {
-  display: grid;
-  grid-template-columns: 310px 1fr;
-  gap: 25px;
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    gap: 25px;
   }
 
   @include desktop {
@@ -195,7 +195,7 @@
 .contacts__map-img {
   position: absolute;
   left: 0;
-  top:63px;
+  top: 63px;
   object-fit: cover;
   width: 100%;
   height: 454px;

@@ -3,13 +3,13 @@
   position: relative;
 
   @include tablet {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-image: linear-gradient($main-background 88px, $border-nav 88px, $border-nav 89px, $secondary-background 89px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: linear-gradient($main-background 88px, $border-nav 88px, $border-nav 89px, $secondary-background 89px);
 
-  &--inner {
-    background-image: linear-gradient($main-background 88px, $border-nav 88px, $border-nav 89px, $hero-background 89px);
-  }
+    &--inner {
+      background-image: linear-gradient($main-background 88px, $border-nav 88px, $border-nav 89px, $hero-background 89px);
+    }
   }
 
   @include desktop {
@@ -37,7 +37,6 @@
 
 .main-header__nav {
   position: absolute;
-  width: 100%;
   z-index: 3;
   display: none;
   left: 0;
@@ -105,9 +104,6 @@
   }
 }
 
-
-
-
 .main-header__logo-image {
   max-width: none;
 }
@@ -128,10 +124,9 @@
     z-index: 5555;
     margin-top: 0;
   }
-}
 
-.no-js {
   .main-header__button {
     display: none;
   }
 }
+

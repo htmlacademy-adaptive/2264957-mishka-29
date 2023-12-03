@@ -7,7 +7,7 @@
   }
 
   @include desktop {
-    margin-left: 175px;
+    padding-left: 225px;
     margin-bottom: 90px;
   }
 }
@@ -45,7 +45,7 @@
 .about-us__item {
   position: relative;
   color: $heading-text;
-  font-family: Open Sans;
+  font-family: inherit;
   font-size: 17px;
   font-style: normal;
   font-weight: 700;
@@ -139,5 +139,4 @@
       left: 3px;
     }
   }
-
 }
