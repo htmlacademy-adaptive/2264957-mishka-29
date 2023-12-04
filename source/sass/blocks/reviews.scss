@@ -47,7 +47,7 @@
   }
 
   @include desktop {
-    margin-top: 40px;
+    margin-top: 34px;
   }
 }
 
@@ -63,6 +63,7 @@
   @include desktop {
     margin-left: 175px;
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -100,6 +101,7 @@
   @include tablet {
     margin-top: 60px;
     font-size: 18px;
+    max-width: 400px;
   }
 
   @include desktop {

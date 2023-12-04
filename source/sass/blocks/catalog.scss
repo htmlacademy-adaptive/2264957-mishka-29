@@ -189,25 +189,6 @@
   }
 }
 
-.products__description {
-  color: $main-text;
-  font-family: inherit;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-
-  margin: 0 0 18px 0;
-
-  @include tablet {
-    font-size: 15px;
-  }
-
-  @include desktop {
-    margin: 0 0 13px 0;
-  }
-}
-
 .catalog__item-info {
   color: $main-text;
   font-family: inherit;
