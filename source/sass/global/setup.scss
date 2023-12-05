@@ -53,8 +53,8 @@ a {
   max-width: 1150px;
 
   @include tablet {
-    padding-left: 49px;
-    padding-right: 49px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   &--mobile {
@@ -63,8 +63,8 @@ a {
     margin: 0 auto;
 
     @include tablet {
-      padding-left: 49px;
-      padding-right: 49px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 
@@ -97,7 +97,7 @@ a {
     margin: 0;
 
     @include desktop {
-      padding: 0 49px;
+      padding: 0 50px;
       margin: 0 auto;
     }
   }

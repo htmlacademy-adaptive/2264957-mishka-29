@@ -24,7 +24,7 @@
     padding-bottom: 114px;
 
     &::after {
-      mask-image: url("../img/icons/zigzag-fill-desktop.svg");
+      mask-image: url("../img/icons/zigzag-fill-form.svg");
       height: 34px;
     }
   }
@@ -59,7 +59,7 @@
 
   @include tablet {
     font-size: 43px;
-    line-height: 50px
+    line-height: 50px;
   }
 
   @include desktop {

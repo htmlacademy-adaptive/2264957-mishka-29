@@ -42,6 +42,10 @@
     @include tablet {
       padding-top: 12px;
     }
+
+    @include desktop {
+      padding-top: 10px;
+    }
   }
 
   &--name {
@@ -49,6 +53,10 @@
 
     @include tablet {
       padding-top: 17px;
+    }
+
+    @include desktop {
+      padding-top: 20px;
     }
   }
 
@@ -97,9 +105,13 @@
 
     @include tablet {
       background-color: $form-secondary-background;
-      padding-top: 54px;
+      padding-top: 55px;
       padding-bottom: 56px;
       margin-bottom: 50px;
+    }
+
+    @include desktop {
+      padding-top: 56px;
     }
   }
 
@@ -135,11 +147,11 @@
   &--add {
     @include tablet {
       margin-top: 50px;
-      padding-bottom: 45px;
+      padding-bottom: 47px;
     }
 
     @include desktop {
-      padding-bottom: 41px;
+      padding-bottom: 44px;
     }
   }
 }
@@ -152,6 +164,16 @@
 
     @include desktop {
       gap: 27px;
+    }
+
+    &--checkbox {
+      @include tablet {
+        gap: 77px;
+      }
+
+      @include desktop {
+        gap: 81px;
+      }
     }
 
     &--input {
@@ -179,6 +201,7 @@
 
     @include desktop {
       grid-template-columns: 1fr 1fr 289px;
+      row-gap: 37px;
     }
   }
 }
@@ -268,7 +291,7 @@
       }
 
       @include desktop {
-        margin-bottom: 41px;
+        margin-bottom: 37px;
       }
     }
   }
@@ -344,8 +367,8 @@
   }
 
   &--radio {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 
     @include tablet {
@@ -506,7 +529,7 @@
   font-family: inherit;
   font-size: 14px;
   line-height: 16px;
-  margin-top: 8px;
+  margin-top: 13px;
   padding-bottom: 28px;
 
   @include tablet {

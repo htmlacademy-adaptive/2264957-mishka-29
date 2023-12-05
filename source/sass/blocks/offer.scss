@@ -157,6 +157,10 @@
 
   @include tablet {
     font-size: 20px;
+    padding-bottom: 32px;
+  }
+
+  @include desktop {
     padding-bottom: 34px;
   }
 }
@@ -198,5 +202,11 @@
   @include desktop {
     height: 636px;
     width: 525px;
+  }
+}
+
+.offer__order-buttoon {
+  @include desktop {
+    padding: 14px 70px;
   }
 }
