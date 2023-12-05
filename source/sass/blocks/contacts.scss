@@ -2,7 +2,7 @@
   @include desktop {
     display: grid;
     grid-template-columns: 1fr 576px;
-    margin-bottom: 104px;
+    margin-bottom: 106px;
     grid-template-rows: auto auto 1fr;
     column-gap: 30px;
   }
@@ -67,7 +67,7 @@
 
     @include desktop {
       margin-top: 19px;
-      margin-bottom: 29px;
+      margin-bottom: 31px;
     }
   }
 
@@ -150,20 +150,21 @@
 
 .contacts__button {
   width: 260px;
-  padding: 16px 38px;
+  padding: 15px 38px;
   margin: 0 auto;
-  margin-bottom: 42px;
-  height: 52px;
+  margin-bottom: 40px;
 
   @include tablet {
     width: 230px;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
+    padding: 16px 38px;
   }
 
   @include desktop {
     margin-left: 175px;
     margin-bottom: 0;
     align-self: self-end;
+    padding: 12px 38px;
   }
 }
 

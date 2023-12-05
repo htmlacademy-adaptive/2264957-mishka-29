@@ -541,13 +541,12 @@
 }
 
 .form__button {
-  padding: 18px 37px;
+  padding: 15px 37px;
   font-size: 17px;
-  height: 52px;
 
   @include tablet {
     width: 230px;
-    padding: 16px 20px;
+    padding: 14px 20px;
     order: -1;
   }
 }
