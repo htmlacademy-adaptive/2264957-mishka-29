@@ -142,6 +142,10 @@
     @include tablet {
       padding: 24px 34px 26px 32px;
       flex-direction: row;
+
+      &::before {
+        right: 33px;
+      }
     }
 
     @include desktop {

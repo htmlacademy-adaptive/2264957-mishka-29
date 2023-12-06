@@ -7,18 +7,17 @@
     background-size: 350px auto;
     padding-bottom: 47px;
     padding-top: 78px;
-    margin-bottom: 153px;
+    margin-bottom: 115px;
   }
 
   @include desktop {
-    padding-top: 79px;
-    background-position-x: 49px;
-    padding-bottom: 96px;
-    margin-bottom: 159px;
+    background-image: none;
   }
 }
 
-.reviews-wrapper {
+.reviews__wrapper {
+  position: relative;
+
   @include tablet {
     display: grid;
     grid-template-columns: 350px 175px;
@@ -27,6 +26,25 @@
 
   @include desktop {
     grid-template-columns: 1fr 175px;
+    background-image: url("../img/background/review.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px auto;
+    padding-top: 79px;
+    background-position-x: 49px;
+    padding-bottom: 96px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      mask-image: url("../img/icons/zigzag-line-desktop.svg");
+      width: auto;
+      background-color: $special-grey;
+      mask-repeat: no-repeat;
+      left: 49px;
+      height: 23px;
+      bottom: -91px;
+      right: 49px;
+    }
   }
 }
 
@@ -117,6 +135,9 @@
 
     @include tablet {
       font-size: 17px;
+    }
+
+    @include desktop {
       margin-top: 3px;
     }
   }
@@ -134,5 +155,6 @@
 
   @include desktop {
     padding: 14px 26px;
+    align-self: self-start;
   }
 }

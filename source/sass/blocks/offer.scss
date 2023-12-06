@@ -12,6 +12,8 @@
 }
 
 .offer__wrapper {
+  position: relative;
+
   @include tablet {
     display: grid;
     grid-template-columns: 292px 1fr;
@@ -21,6 +23,19 @@
   @include desktop {
     grid-template-columns: 467px 1fr;
     column-gap: 58px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      mask-image: url("../img/icons/zigzag-line-desktop.svg");
+      width: auto;
+      background-color: $special-grey;
+      mask-repeat: no-repeat;
+      left: 49px;
+      height: 23px;
+      bottom: -96px;
+      right: 49px;
+    }
   }
 }
 

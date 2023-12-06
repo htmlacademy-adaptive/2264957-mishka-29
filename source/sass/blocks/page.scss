@@ -230,11 +230,8 @@
     }
 
     @include desktop {
-      mask-image: url("../img/icons/zigzag-line-desktop.svg");
-      height: 23px;
-      bottom: -96px;
-      left: 49px;
-      width: 91%;
+      mask-image: none;
+      background-color: inherit;
     }
   }
 
