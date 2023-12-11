@@ -210,8 +210,14 @@
   position: relative;
 
   &:hover {
-    .form__item::after {
-      background-color: red;
+    &::after {
+      background-color: $special-sea;
+    }
+  }
+
+  &:focus-within {
+    &::after {
+      background-color: $special-sea;
     }
   }
 
@@ -220,7 +226,7 @@
     display: block;
     mask-repeat: no-repeat;
     content: "";
-    background-color: $black;
+    background-color: $icons-grey;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -247,10 +253,6 @@
       width: 25px;
       height: 24px;
       right: 7px;
-
-      &:hover {
-        background-color: red;
-      }
 
       @include tablet {
         right: 28px;

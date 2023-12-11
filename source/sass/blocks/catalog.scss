@@ -99,9 +99,10 @@
   padding: 27px 5px 18px 27px;
   border: 1px solid $catalog-item-border;
   width: 100%;
+  margin-top: auto;
 
   @include tablet {
-    padding: 27px 30px 172px 32px;
+    padding: 27px 30px 10px 32px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -109,62 +110,53 @@
   }
 
   @include desktop {
-    padding: 27px 26px 25px 27px;
+    padding: 27px 26px 13px 27px;
     width: 100%;
-  }
-
-  &--price {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 10px;
-    padding: 23px 26px 27px 28px;
-    position: relative;
-    border-top: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 28px;
-      right: 28px;
-      height: 1px;
-      background-color: $catalog-item-border;
-
-      @include tablet {
-        right: 33px;
-      }
-
-      @include desktop {
-        top: 10px;
-      }
-    }
-
-    @include tablet {
-      padding: 24px 34px 26px 32px;
-      flex-direction: row;
-
-      &::before {
-        right: 33px;
-      }
-    }
-
-    @include desktop {
-      padding: 35px 24px 24px 27px;
-    }
   }
 
   &--name {
     border-bottom: none;
   }
+}
 
-  &--big {
+.catalog__item-wrapper--price {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  padding: 23px 26px 27px 28px;
+  position: relative;
+  border-top: none;
+  flex-grow: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 28px;
+    right: 28px;
+    height: 1px;
+    background-color: $catalog-item-border;
+
     @include tablet {
-      padding-bottom: 148px;
+      right: 33px;
     }
 
     @include desktop {
-      padding-bottom: 0;
+      top: 0;
     }
+  }
+
+  @include tablet {
+    padding: 24px 34px 26px 32px;
+    flex-direction: row;
+
+    &::before {
+      right: 33px;
+    }
+  }
+
+  @include desktop {
+    padding: 23px 24px 24px 27px;
   }
 }
 
@@ -265,4 +257,10 @@
   @include desktop {
     margin: 0 4px 0 0;
   }
+}
+
+.catalog__item-wrapper-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

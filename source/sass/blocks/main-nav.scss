@@ -63,7 +63,7 @@
 
   text-align: left;
   background-color: $main-background;
-  box-shadow: 0px 1px 0px 0px $navigation-shadow, 0px 1px 0px 0px $navigation-shadow inset;
+  box-shadow: 0 1px 0 0 $navigation-shadow, 0 1px 0 0 $navigation-shadow inset;
 
   @include tablet {
     box-shadow: none;
@@ -100,7 +100,7 @@
     top: 50%;
     left: 30px;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $icons-grey;
 
     @include tablet {
       left: 31px;
@@ -118,7 +118,7 @@
     top: 50%;
     left: 30px;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $icons-grey;
 
     @include tablet {
       left: 30px;
@@ -199,15 +199,6 @@
     &--knitting {
       padding: 32px 40px 32px 41px;
       font-size: 17px;
-
-      &::after {
-        position: absolute;
-        content: "";
-        border-left: 1px solid rgba(0,0,0,0.1);
-        left: 0;
-        top: 0;
-        height: 100%;
-      }
     }
 
     &--new {
@@ -255,7 +246,18 @@
   }
 }
 
-
+.main-nav__item-link--knitting {
+  @include desktop {
+    &::after {
+      position: absolute;
+      content: "";
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+  }
+}
 
 .main-nav__item-link-span {
   @include tablet {
