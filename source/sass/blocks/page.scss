@@ -1,0 +1,251 @@
+.page__title {
+  color: $heading-text;
+  font-family: inherit;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.page__text {
+  color: $main-text;
+  font-family: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.page__button {
+  border: 2px solid $main-text;
+  background-color: $white;
+  padding: 13px 70px;
+  width: 100%;
+  color: $main-text;
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: block;
+
+  @include tablet {
+    font-size: 17px;
+  }
+
+  &:hover {
+    background-color: $special-black;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $special-black;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--modal {
+    color: $white;
+    text-transform: uppercase;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 52px;
+    background-color: $tiffani;
+    border: 2px solid $tiffani;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      background-color: $tiffani;
+    }
+
+    &:active {
+      color: $main-text;
+      background-color: $tiffani;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+
+.page__footer {
+  background-color: $special-grey;
+
+  @include tablet {
+    padding: 49px 0 62px 0;
+  }
+}
+
+.page__footer-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: inherit;
+    align-items: center;
+  }
+}
+
+.page__footer-social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 27px;
+  width: 100%;
+  padding: 25px 0 28px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $footer-border;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+
+    @include tablet {
+      border-bottom: none;
+    }
+  }
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+
+.page__footer-logo {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  &:hover {
+    svg {
+      fill: $logo-htmlacademy-hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $logo-htmlacademy;
+      opacity: 0.3;
+    }
+  }
+}
+
+.page__footer-html-wrapper {
+  margin: 0 auto;
+  padding: 27px 0 32px 0;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.page__footer-html {
+  color: $black;
+  font-family: inherit;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+
+  &:hover {
+    svg {
+      fill: $logo-htmlacademy-hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $logo-htmlacademy;
+      opacity: 0.3;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page__footer-html-img {
+  margin-left: 27px;
+  vertical-align: middle;
+  fill: $logo-htmlacademy;
+
+  @include tablet {
+    vertical-align: bottom;
+  }
+}
+
+.page__line {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    mask-image: url("../img/icons/zigzag-line.svg");
+    height: 6px;
+    width: 100%;
+    background-color: $special-grey;
+    background-repeat: no-repeat;
+    bottom: -7px;
+    left: 0;
+
+    @include tablet {
+      mask-image: url("../img/icons/zigzag-line-tablet.svg");
+      height: 17px;
+      left: 0;
+      bottom: -70px;
+    }
+
+    @include desktop {
+      mask-image: none;
+      background-color: inherit;
+    }
+  }
+}
+
+.page__line--reviews {
+  &::after {
+    bottom: -52px;
+
+    @include tablet {
+      bottom: -84px;
+    }
+
+    @include desktop {
+      bottom: -88px;
+    }
+  }
+}

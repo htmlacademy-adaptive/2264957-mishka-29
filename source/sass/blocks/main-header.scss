@@ -1,0 +1,131 @@
+.main-header {
+  background-color: transparent;
+  position: relative;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: linear-gradient($main-background 88px, $border-nav 88px, $border-nav 89px, $secondary-background 89px);
+
+    &--inner {
+      background-image: linear-gradient($main-background 88px, $border-nav 88px, $border-nav 89px, $hero-background 89px);
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 259px 1fr;
+  }
+}
+
+.main-header__wrapper {
+  display: flex;
+  padding: 22px 33px;
+  position: relative;
+  height: 79px;
+
+  @include tablet {
+    height: 95px;
+    padding: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  @include desktop {
+    grid-column: 2/3;
+  }
+}
+
+.main-header__nav {
+  position: absolute;
+  z-index: 3;
+  display: none;
+  left: 0;
+  top: 79px;
+  width: 100%;
+
+  @include tablet {
+    position: static;
+    display: block;
+    background-color: transparent;
+  }
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+
+  @include tablet {
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+
+  @include desktop {
+    left: 53px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-header__button {
+  display: block;
+  background-image: url("../img/stack.svg#menu-open");
+  width: 20px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  z-index: 5;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.main-header__logo-image {
+  max-width: none;
+}
+
+.main-header__toggle-closed {
+  background-image: url("../img/icons/menu-close.svg");
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.no-js {
+  .main-header__nav {
+    display: block;
+    position: static;
+    z-index: 5555;
+    margin-top: 0;
+  }
+
+  .main-header__button {
+    display: none;
+  }
+}

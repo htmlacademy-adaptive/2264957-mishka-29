@@ -1,0 +1,272 @@
+.main-nav {
+  grid-column: 1/4;
+  grid-row: 1/4;
+}
+
+.main-nav__wrapper {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 321px 83px 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 178px 440px;
+  }
+}
+
+
+.main-nav__list {
+  @include list;
+
+  &--desktop {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+
+  &--navigation {
+    @include tablet {
+      grid-column: 2/4;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    @include desktop {
+      grid-column: 3/4;
+    }
+  }
+
+  &--catalog {
+    @include tablet {
+      display: flex;
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    @include desktop {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+  }
+}
+
+
+.main-nav__item {
+  position: relative;
+
+  text-align: left;
+  background-color: $main-background;
+  box-shadow: 0 1px 0 0 $navigation-shadow, 0 1px 0 0 $navigation-shadow inset;
+
+  @include tablet {
+    box-shadow: none;
+    background-color: transparent;
+
+
+    &--search::after {
+      position: absolute;
+      content: "";
+      border-left: 1px solid $light-black;
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+
+    &--basket::after {
+      position: absolute;
+      content: "";
+      border-left: 1px solid $light-black;
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+  }
+
+  &--search::before {
+    content: "";
+    mask-image: url("../img/stack.svg#search");
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-color: $icons-grey;
+
+    @include tablet {
+      left: 31px;
+    }
+  }
+
+  &--basket::before {
+    content: "";
+    mask-image: url("../img/stack.svg#basket");
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-color: $icons-grey;
+
+    @include tablet {
+      left: 30px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      background-color: $tiffani;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $tiffani;
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav__item-paragraph {
+  display: none;
+  margin: 0;
+
+  @include tablet {
+    display: block;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    color: $main-text;
+    text-align: right;
+    font-family: inherit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 20px 0;
+  }
+}
+
+.main-nav__item-link {
+  padding: 29px 26px 26px 76px;
+  display: block;
+  position: relative;
+  color: $heading-text;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+
+  @include tablet {
+    &--catalog {
+      padding: 20px 0;
+    }
+
+    &--knitting {
+      padding: 20px 0;
+      font-size: 15px;
+    }
+
+    &--basket {
+      padding: 32px 0 32px 83px;
+    }
+
+    &--search {
+      width: 82px;
+      padding: 44px 14px 44px 12px;
+    }
+  }
+
+
+  @include desktop {
+    &--catalog {
+      padding: 32px 0;
+    }
+
+    &--knitting {
+      padding: 32px 40px 32px 41px;
+      font-size: 17px;
+    }
+
+    &--new {
+      padding: 20px 0;
+    }
+
+    &--sale {
+      padding: 20px 0 20px 45px;
+    }
+  }
+
+  &--catalog {
+    @include tablet {
+      display: block;
+      font-size: 15px;
+      width: 169px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      width: 179px;
+    }
+  }
+
+  &--new {
+    @include desktop {
+      display: block;
+      font-size: 15px;
+      width: 174px;
+    }
+  }
+
+  &--sale {
+    @include desktop {
+      font-size: 15px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__item-link--knitting {
+  @include desktop {
+    &::after {
+      position: absolute;
+      content: "";
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+  }
+}
+
+.main-nav__item-link-span {
+  @include tablet {
+    &--search {
+      display: none;
+    }
+  }
+}
+
+.menu-nav__opened {
+  display: block;
+}

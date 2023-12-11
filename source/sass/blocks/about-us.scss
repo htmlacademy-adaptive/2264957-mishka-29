@@ -1,0 +1,142 @@
+.about-us {
+  padding-bottom: 58px;
+
+  @include tablet {
+    padding-bottom: 0;
+    margin-bottom: 83px;
+  }
+
+  @include desktop {
+    padding-left: 225px;
+    margin-bottom: 11px;
+  }
+}
+
+.about-us__title {
+  margin-top: 38px;
+  padding-bottom: 82px;
+
+  @include tablet {
+    padding-bottom: 98px;
+  }
+
+  @include desktop {
+    padding-bottom: 96px;
+  }
+}
+
+.about-us__list {
+  @include list;
+  display: grid;
+  row-gap: 83px;
+
+  @include tablet {
+    grid-template-columns: 265px 1fr;
+    column-gap: 70px;
+    row-gap: 110px;
+  }
+
+  @include desktop {
+    grid-template-columns: 265px 325px;
+    column-gap: 86px;
+  }
+}
+
+.about-us__item {
+  position: relative;
+  color: $heading-text;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+
+    &--clew {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+
+    &--rocket {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: top;
+    fill: $tiffani;
+  }
+
+  &--flower {
+    &::before {
+      mask-image: url("../img/stack.svg#flower");
+      background-color: $tiffani;
+      width: 33px;
+      height: 38px;
+      top: -54px;
+      left: 7px;
+    }
+  }
+
+  &--money {
+    &::before {
+      mask-image: url("../img/stack.svg#money");
+      background-color: $tiffani;
+      width: 47px;
+      height: 27px;
+      top: -53px;
+      left: 0;
+    }
+  }
+
+  &--heart {
+    &::before {
+      mask-image: url("../img/stack.svg#heart");
+      background-color: $tiffani;
+      width: 34px;
+      height: 27px;
+      top: -48px;
+      left: 7px;
+    }
+  }
+
+  &--clew {
+    &::before {
+      mask-image: url("../img/stack.svg#clew");
+      background-color: $tiffani;
+      width: 35px;
+      height: 34px;
+      top: -51px;
+      left: 3px;
+    }
+  }
+
+  &--rocket {
+    &::before {
+      mask-image: url("../img/stack.svg#rocket");
+      background-color: $tiffani;
+      width: 55px;
+      height: 23px;
+      top: -51px;
+      left: -6px;
+    }
+  }
+
+  &--present {
+    &::before {
+      mask-image: url("../img/stack.svg#present");
+      background-color: $tiffani;
+      width: 33px;
+      height: 32px;
+      top: -52px;
+      left: 3px;
+    }
+  }
+}
