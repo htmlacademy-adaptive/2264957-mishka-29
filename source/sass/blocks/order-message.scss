@@ -87,19 +87,19 @@
   }
 }
 
-.order-message__control:hover+.order-message__control-description {
+.order-message__control:hover + .order-message__control-description {
   border: solid 2px $modal-radio-hover;
 }
 
-.order-message__control:focus+.order-message__control-description {
+.order-message__control:focus + .order-message__control-description {
   border: solid 2px $modal-radio-hover;
 }
 
-.order-message__control:checked+.order-message__control-description {
+.order-message__control:checked + .order-message__control-description {
   border: solid 2px $special-sea;
 }
 
-.order-message__control:disabled+.order-message__control-description {
+.order-message__control:disabled + .order-message__control-description {
   opacity: 0.1;
   pointer-events: none;
   cursor: default;

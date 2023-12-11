@@ -61,26 +61,6 @@
     transition: opacity 0.3s ease;
   }
 
-  &--prev {
-    &::before {
-      background-image: url("../img/stack.svg#huge-arrow-left");
-
-      @include tablet {
-        left: 8px;
-      }
-    }
-  }
-
-  &--next {
-    &::before {
-      background-image: url("../img/stack.svg#huge-arrow-right");
-
-      @include tablet {
-        left: 20px;
-      }
-    }
-  }
-
   &:hover {
     &::before {
       opacity: 0.6;
@@ -90,6 +70,26 @@
   &:active {
     &::before {
       opacity: 0.3;
+    }
+  }
+}
+
+.slider__button--prev {
+  &::before {
+    background-image: url("../img/stack.svg#huge-arrow-left");
+
+    @include tablet {
+      left: 8px;
+    }
+  }
+}
+
+.slider__button--next {
+  &::before {
+    background-image: url("../img/stack.svg#huge-arrow-right");
+
+    @include tablet {
+      left: 20px;
     }
   }
 }

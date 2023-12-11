@@ -23,11 +23,6 @@
       background-color: $black-black;
       top: -23px;
       right: 96px;
-
-      @include desktop {
-        left: 64px;
-        top: -17px;
-      }
     }
 
     &::after {
@@ -39,11 +34,6 @@
       border-style: solid;
       right: 15px;
       top: -19px;
-
-      @include desktop {
-        top: -13px;
-        left: 72px;
-      }
     }
   }
 
@@ -51,6 +41,16 @@
     padding-left: 175px;
     margin-top: 79px;
     padding-bottom: 0;
+
+    &::before {
+      left: 64px;
+      top: -17px;
+    }
+
+    &::after {
+      top: -13px;
+      left: 72px;
+    }
   }
 }
 
@@ -88,43 +88,43 @@
   @include tablet {
     font-size: 17px;
   }
+}
 
-  &--mail {
-    position: relative;
+.contacts__info--mail {
+  position: relative;
 
-    &:hover {
-      color: $tiffany-dark;
-
-      &::after {
-        border-bottom: 1px solid $tiffany-dark;
-      }
-    }
-
-    &:active {
-      color: $tiffany-dark;
-
-      &::after {
-        opacity: 0.1;
-      }
-    }
+  &:hover {
+    color: $tiffany-dark;
 
     &::after {
-      position: absolute;
-      content: "";
-      border-bottom: 1px solid $special-sea;
-      display: block;
-      width: 169px;
-      left: 0;
-      top: 27px;
+      border-bottom: 1px solid $tiffany-dark;
+    }
+  }
 
-      @include tablet {
-        width: 205px;
-        top: 29px;
-      }
+  &:active {
+    color: $tiffany-dark;
 
-      @include desktop {
-        top: 33px;
-      }
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid $special-sea;
+    display: block;
+    width: 169px;
+    left: 0;
+    top: 27px;
+
+    @include tablet {
+      width: 205px;
+      top: 29px;
+    }
+
+    @include desktop {
+      top: 33px;
     }
   }
 }

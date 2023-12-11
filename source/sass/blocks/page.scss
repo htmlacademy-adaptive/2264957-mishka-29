@@ -40,7 +40,7 @@
   width: 100%;
   color: $main-text;
   text-align: center;
-  font-family: Open Sans;
+  font-family: inherit;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -234,18 +234,18 @@
       background-color: inherit;
     }
   }
+}
 
-  &--reviews {
-    &::after {
-      bottom: -52px;
+.page__line--reviews {
+  &::after {
+    bottom: -52px;
 
-      @include tablet {
-        bottom: -84px;
-      }
+    @include tablet {
+      bottom: -84px;
+    }
 
-      @include desktop {
-        bottom: -88px;
-      }
+    @include desktop {
+      bottom: -88px;
     }
   }
 }

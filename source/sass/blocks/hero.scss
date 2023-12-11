@@ -66,6 +66,7 @@
 
 .hero__menu {
   position: relative;
+  margin: 0;
 
   &::after {
     @include tablet {
@@ -131,30 +132,30 @@
     }
   }
 
-  &--toy {
-    background-color: $special-tiffany;
-
-    &::after {
-      mask-image: url("../img/stack.svg#toy");
-      background-color: $dark-sea;
-      width: 60px;
-      height: 60px;
-      right: 26px;
-
-      @include tablet {
-        right: 35px;
-      }
-    }
-
-    &:hover {
-      background-color: $tiffany-dark;
-      transform: translateY(-5px);
-    }
-  }
-
   @include tablet {
     width: 100%;
     min-height: 119px;
+  }
+}
+
+.hero__menu-item--toy {
+  background-color: $special-tiffany;
+
+  &::after {
+    mask-image: url("../img/stack.svg#toy");
+    background-color: $dark-sea;
+    width: 60px;
+    height: 60px;
+    right: 26px;
+
+    @include tablet {
+      right: 35px;
+    }
+  }
+
+  &:hover {
+    background-color: $tiffany-dark;
+    transform: translateY(-5px);
   }
 }
 
@@ -174,8 +175,4 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
-
-.hero__menu {
-  margin: 0;
 }

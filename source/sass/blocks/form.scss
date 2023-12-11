@@ -161,30 +161,30 @@
     display: grid;
     grid-template-columns: 88px 1fr;
     gap: 81px;
+  }
 
-    @include desktop {
-      gap: 27px;
-    }
+  @include desktop {
+    gap: 27px;
+  }
+}
 
-    &--checkbox {
-      @include tablet {
-        gap: 77px;
-      }
+.form__fieldset-wrapper--checkbox {
+  @include tablet {
+    gap: 77px;
+  }
 
-      @include desktop {
-        gap: 81px;
-      }
-    }
+  @include desktop {
+    gap: 26px;
+  }
+}
 
-    &--input {
-      @include tablet {
-        gap: 79px;
-      }
+.form__fieldset-wrapper--input {
+  @include tablet {
+    gap: 79px;
+  }
 
-      @include desktop {
-        gap: 29px;
-      }
-    }
+  @include desktop {
+    gap: 29px;
   }
 }
 
@@ -231,83 +231,82 @@
     transform: translateY(-50%);
   }
 
-  &--name {
-    &:not(:last-child) {
-      margin-bottom: 21px;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+  }
+}
 
-      @include tablet {
-        margin-bottom: 24px;
-      }
-    }
+.form__item--name {
+  &:not(:last-child) {
+    margin-bottom: 21px;
 
     @include tablet {
-      display: flex;
-      align-items: center;
-      column-gap: 26px;
+      margin-bottom: 24px;
     }
   }
+}
 
-  &--tel {
-    &::after {
-      mask-image: url("../img/stack.svg#phone");
-      width: 25px;
-      height: 24px;
+.form__item--tel {
+  &::after {
+    mask-image: url("../img/stack.svg#phone");
+    width: 25px;
+    height: 24px;
+    right: 7px;
+
+    @include tablet {
+      right: 28px;
+      top: 44%;
+    }
+
+    @include desktop {
       right: 7px;
-
-      @include tablet {
-        right: 28px;
-        top: 44%;
-      }
-
-      @include desktop {
-        right: 7px;
-      }
     }
   }
+}
 
-  &--mail {
-    &::after {
-      mask-image: url("../img/stack.svg#mail");
+.form__item--mail {
+  &::after {
+    mask-image: url("../img/stack.svg#mail");
+    right: 3px;
+    width: 32px;
+    height: 21px;
+
+    @include tablet {
+      right: 23px;
+    }
+
+    @include desktop {
       right: 3px;
-      width: 32px;
-      height: 21px;
-
-      @include tablet {
-        right: 23px;
-      }
-
-      @include desktop {
-        right: 3px;
-      }
     }
   }
 }
 
-.form__item-control {
-  &--radio {
-    &:not(:last-child) {
-      margin-bottom: 4px;
+.form__item-control--radio {
+  &:not(:last-child) {
+    margin-bottom: 4px;
 
-      @include tablet {
-        margin-bottom: 39px;
-      }
-
-      @include desktop {
-        margin-bottom: 37px;
-      }
+    @include tablet {
+      margin-bottom: 39px;
     }
-  }
 
-  &--checkbox {
-    &:not(:last-child) {
-      margin-bottom: 23px;
-
-      @include tablet {
-        margin-bottom: 0;
-      }
+    @include desktop {
+      margin-bottom: 37px;
     }
   }
 }
+
+.form__item-control--checkbox {
+  &:not(:last-child) {
+    margin-bottom: 23px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+}
+
 
 .form__control-label {
   color: $heading-text;
