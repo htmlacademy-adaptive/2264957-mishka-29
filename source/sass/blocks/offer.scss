@@ -16,8 +16,8 @@
 
   @include tablet {
     display: grid;
-    grid-template-columns: 292px 1fr;
-    column-gap: 42px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
   }
 
   @include desktop {
@@ -97,12 +97,14 @@
     grid-row: 2/3;
     padding-bottom: 0;
     margin-bottom: 48px;
+    padding-right: 42px;
   }
 
   @include desktop {
     margin-left: 175px;
     margin-bottom: 33px;
-    margin-top: 3px;
+    margin-top: 30px;
+    padding-right: 0;
   }
 }
 
@@ -115,10 +117,13 @@
     grid-column: 1/2;
     grid-row: 3/4;
     margin-bottom: 51px;
+    padding-right: 42px;
   }
 
   @include desktop {
     margin-left: 175px;
+    padding-right: 0;
+    padding-top: 26px;
   }
 }
 
@@ -151,11 +156,13 @@
 
   @include tablet {
     margin-top: 0;
+    padding-right: 42px;
   }
 
   @include desktop {
     margin-left: 175px;
     align-self: self-end;
+    padding-right: 0;
   }
 }
 
@@ -210,8 +217,8 @@
   display: block;
 
   @include tablet {
-    height: 404px;
-    width: 334px;
+    height: auto;
+    width: 100%;
   }
 
   @include desktop {

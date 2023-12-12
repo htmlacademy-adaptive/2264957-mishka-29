@@ -31,8 +31,7 @@
   row-gap: 83px;
 
   @include tablet {
-    grid-template-columns: 265px 1fr;
-    column-gap: 70px;
+    grid-template-columns: 1fr 1fr;
     row-gap: 110px;
   }
 
@@ -54,6 +53,7 @@
   @include tablet {
     font-size: 20px;
     line-height: 22px;
+    padding-right: 30px;
 
     &--clew {
       grid-row: 1/2;
@@ -64,6 +64,10 @@
       grid-row: 2/3;
       grid-column: 2/3;
     }
+  }
+
+  @include desktop {
+    padding-right: 0;
   }
 
   &::before {

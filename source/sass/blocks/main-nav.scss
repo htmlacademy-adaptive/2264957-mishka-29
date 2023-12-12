@@ -7,6 +7,7 @@
   @include tablet {
     display: grid;
     grid-template-columns: 321px 83px 1fr;
+    align-items: start;
   }
 
   @include desktop {
@@ -87,55 +88,6 @@
       height: 100%;
     }
   }
-
-  &--search::before {
-    content: "";
-    mask-image: url("../img/stack.svg#search");
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    background-color: $icons-grey;
-
-    @include tablet {
-      left: 31px;
-    }
-  }
-
-  &--basket::before {
-    content: "";
-    mask-image: url("../img/stack.svg#basket");
-    position: absolute;
-    width: 21px;
-    height: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    background-color: $icons-grey;
-
-    @include tablet {
-      left: 30px;
-    }
-  }
-
-  &:hover {
-    &::before {
-      background-color: $tiffani;
-    }
-  }
-
-  &:active {
-    &::before {
-      background-color: $tiffani;
-      opacity: 0.3;
-    }
-  }
 }
 
 .main-nav__item-paragraph {
@@ -168,6 +120,8 @@
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
+  max-width: 320px;
+  margin: 0 auto;
 
   @include tablet {
     &--catalog {
@@ -238,10 +192,55 @@
 
   &:hover {
     opacity: 0.6;
+
+    &::before {
+      background-color: $tiffani;
+    }
   }
 
   &:active {
     opacity: 0.3;
+
+    &::before {
+      background-color: $tiffani;
+      opacity: 0.3;
+    }
+  }
+
+  &--search::before {
+    content: "";
+    mask-image: url("../img/stack.svg#search");
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-color: $icons-grey;
+
+    @include tablet {
+      left: 31px;
+    }
+  }
+
+  &--basket::before {
+    content: "";
+    mask-image: url("../img/stack.svg#basket");
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-color: $icons-grey;
+
+    @include tablet {
+      left: 30px;
+    }
   }
 }
 
