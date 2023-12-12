@@ -3,13 +3,11 @@
 $white: #ffffff;
 $sea-wave: #47c2af;
 $tiffani: #61d1bb;
-$tiffany-dark: #47c2af;
 $special-tiffany: #57c2b2;
 $dark-sea: #149080;
 $sea: #59d5bc;
 $special-sea: #62d1ba;
 $light-grey: rgba(237, 237, 237, 0.3);
-$grey-grey-grey: #ececec;
 $basic-grey: #eeeeee;
 $special-grey: #f1f1f1;
 $dark-grey: #e5e5e5;
@@ -84,7 +82,7 @@ $input-control-active: #d5d5d5;
 
 $logo-hover: $sea-wave;
 $logo-htmlacademy: $tiffani;
-$logo-htmlacademy-hover: $tiffany-dark;
+$logo-htmlacademy-hover: $sea-wave;
 $social-icons: $special-black;
 
 // BORDERS
@@ -94,7 +92,7 @@ $footer-border: $dark-grey;
 $offer-border: $grey-shadow;
 $slider-button-border: $grey-shadow;
 $modal-border: $grey-grey;
-$catalog-item-border: $grey-grey-grey;
+$catalog-item-border: $grey-shadow;
 $form-title-border: $special-sea;
 $modal-radio-hover: rgba(69, 69, 69, 0.3);
 

@@ -110,6 +110,7 @@
   @include tablet {
     flex-direction: inherit;
     align-items: center;
+    gap: 30px;
   }
 }
 
@@ -136,6 +137,7 @@
 
   @include tablet {
     padding: 0;
+    flex-wrap: wrap;
   }
 }
 

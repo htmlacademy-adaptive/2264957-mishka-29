@@ -94,15 +94,15 @@
   position: relative;
 
   &:hover {
-    color: $tiffany-dark;
+    color: $sea-wave;
 
     &::after {
-      border-bottom: 1px solid $tiffany-dark;
+      border-bottom: 1px solid $sea-wave;
     }
   }
 
   &:active {
-    color: $tiffany-dark;
+    color: $sea-wave;
 
     &::after {
       opacity: 0.1;

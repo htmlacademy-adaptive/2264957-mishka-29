@@ -7,11 +7,12 @@
     background-size: 350px auto;
     padding-bottom: 47px;
     padding-top: 78px;
-    margin-bottom: 115px;
+    margin-bottom: 151px;
   }
 
   @include desktop {
     background-image: none;
+    margin-bottom: 115px;
   }
 }
 
