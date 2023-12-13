@@ -119,6 +119,18 @@
   }
 }
 
+.catalog__item-wrapper--big {
+  padding: 25px 26px 17px 27px;
+
+  @include tablet {
+    padding: 25px 26px 17px 32px;
+  }
+
+  @include desktop {
+    padding: 25px 26px 17px 27px;
+  }
+}
+
 .catalog__item-wrapper--price {
   display: flex;
   justify-content: space-between;
@@ -182,6 +194,14 @@
   @include tablet {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+.catalog__item-title--big {
+  padding-bottom: 3px;
+
+  @include desktop {
+    padding-bottom: 0;
   }
 }
 
