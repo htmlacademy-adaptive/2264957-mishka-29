@@ -10,6 +10,8 @@
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./fonts/opensans.woff2">
+  <link rel="preload" href="./fonts/opensansbold.woff2">
 
 </head>
 
@@ -21,9 +23,7 @@
       <a class="main-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-desktop.svg" width="149" height="72">
-
           <source media="(min-width: 768px)" srcset="img/icons/mishka-logo-tablet.svg" width="113" height="46">
-
           <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка.">
         </picture>
       </a>
@@ -33,15 +33,10 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list main-nav__list--catalog">
           <li class="main-nav__item main-nav__item--catalog">
-            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current"
-              href="catalog.html">
-              Каталог товаров
-            </a>
+            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item main-nav__item--knitting">
-            <a class="main-nav__item-link main-nav__item-link--knitting" href="form.html">
-              Вязание на заказ
-            </a>
+            <a class="main-nav__item-link main-nav__item-link--knitting" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-nav__list main-nav__list--navigation">
@@ -95,32 +90,19 @@
       <div class="offer__wrapper container">
         <h2 class="offer__title page__title">Вязаные корзинки</h2>
         <p class="offer__week">ТОВАР НЕДЕЛИ</p>
-        <p class="offer-description page__text">Экологически чистая пряжа,
-          ручная&nbsp;работа. Доступны в шести расцветках и трёх размерах.</p>
+        <p class="offer-description page__text">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках и трёх размерах.</p>
         <dl class="offer__list">
           <div class="offer__item">
-            <dt class="offer__unit page__text">
-              Цвет:
-            </dt>
-            <dd class="offer__description page__text">
-              тиффани/серый
-            </dd>
+            <dt class="offer__unit page__text">Цвет:</dt>
+            <dd class="offer__description page__text">тиффани/серый</dd>
           </div>
           <div class="offer__item">
-            <dt class="offer__unit page__text">
-              Диаметр:
-            </dt>
-            <dd class="offer__description page__text">
-              25 см
-            </dd>
+            <dt class="offer__unit page__text">Диаметр:</dt>
+            <dd class="offer__description page__text">25 см</dd>
           </div>
           <div class="offer__item">
-            <dt class="offer__unit page__text">
-              Высота:
-            </dt>
-            <dd class="offer__description page__text">
-              15 см
-            </dd>
+            <dt class="offer__unit page__text">Высота:</dt>
+            <dd class="offer__description page__text">15 см</dd>
           </div>
         </dl>
         <picture class="offer__img-wrapper">
@@ -141,7 +123,7 @@
         </picture>
         <div class="offer__order">
           <p class="offer__order-price">Цена: 990 руб.</p>
-          <button class="offer__order-buttoon page__button">ЗАКАЗАТЬ</button>
+          <button class="offer__order-buttoon page__button" type="button">ЗАКАЗАТЬ</button>
         </div>
       </div>
     </section>
@@ -151,11 +133,9 @@
         <li class="about-us__item about-us__item--flower">Экологически чистые&nbsp;материалы</li>
         <li class="about-us__item about-us__item--money">Скандинавский стиль по&nbsp;российской цене</li>
         <li class="about-us__item about-us__item--heart">Увеличивает лайки на&nbsp;фотографиях</li>
-        <li class="about-us__item about-us__item--clew">Связано вручную
-          с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
+        <li class="about-us__item about-us__item--clew">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
         <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
-        <li class="about-us__item about-us__item--present">Поставляется
-          в&nbsp;подарочной&nbsp;упаковке</li>
+        <li class="about-us__item about-us__item--present">Поставляется в&nbsp;подарочной&nbsp;упаковке</li>
       </ul>
     </section>
     <section class="reviews page__line page__line--reviews">
@@ -164,46 +144,29 @@
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item slider__item--current">
             <div class="reviews__text-wrapper">
-              <p class="reviews__text page__text">Я молодая мама, но всё равно фотографии не набирали и близко такого
-                количества
-                лайков,&nbsp;как
-                у&nbsp;популярных инстамамочек.
-                В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке,
-                и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <p class="reviews__text page__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,&nbsp;как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             </div>
             <cite class="reviews__author-name">Анастасия Красильникова<span
                 class="reviews__author-name reviews__author-name--mail">@misssssiskras</span></cite>
           </blockquote>
           <blockquote class="reviews__item slider__item">
             <div class="reviews__text-wrapper">
-              <p class="reviews__text page__text">
-                Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,&nbsp;как
-                у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров
-                и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают
-                больше лайков!
-              </p>
+              <p class="reviews__text page__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,&nbsp;как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             </div>
             <cite class="reviews__author-name">Екатерина Красильникова<span
                 class="reviews__author-name reviews__author-name--mail">@misssssiskras2</span></cite>
           </blockquote>
           <blockquote class="reviews__item slider__item">
             <div class="reviews__text-wrapper">
-              <p class="reviews__text page__text"> Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали
-                и близко
-                такого количества лайков,&nbsp;как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила
-                аксессуаров
-                и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают
-                больше лайков!</p>
+              <p class="reviews__text page__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,&nbsp;как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             </div>
             <cite class="reviews__author-name">Елена Красильникова<span
                 class="reviews__author-name reviews__author-name--mail">@misssssiskras3</span></cite>
           </blockquote>
         </div>
           <div class="slider__button-wrapper">
-            <button class="slider__button slider__button--prev" type="button"><span class="visually-hidden">Предыдущий
-                отзыв</span></button>
-            <button class="slider__button slider__button--next" type="button"><span class="visually-hidden">Слейдующий
-                отзыв</span></button>
+            <button class="slider__button slider__button--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+            <button class="slider__button slider__button--next" type="button"><span class="visually-hidden">Слейдующий отзыв</span></button>
           </div>
           <a class="reviews__button page__button" href="form.html">написать</a>
       </div>
@@ -217,8 +180,7 @@
         </div>
         <div class="contacts__wrapper container container--contacts">
           <p class="contacts__info">адрес:</p>
-          <address class="contacts__info contacts__info--address">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная
-            д.&nbsp;19/8, офис 101</address>
+          <address class="contacts__info contacts__info--address">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;19/8, офис 101</address>
         </div>
       </div>
       <div class="contacts__map">
@@ -248,41 +210,43 @@
 
   <footer class="page__footer">
     <div class="page__footer-wrapper container">
-      <div class="page__footer-logo-wrapper">
         <a class="page__footer-logo" href="index.html">
           <svg class="page__footer-logo-img" width="102" height="34">
             <use xlink:href="./img/stack.svg#logo-footer"></use>
           </svg>
         </a>
-      </div>
-      <div class="page__footer-social social">
+      <ul class="page__footer-social social">
+        <li class="social__item">
         <a class="social__link social__vk" href="#">
           <svg class="social__vk-img" width="28" height="22">
             <use xlink:href="./img/stack.svg#vkontakte"></use>
           </svg>
           <span class="visually-hidden">В контакте</span>
         </a>
+        </li>
+        <li class="social__item">
         <a class="social__link social__yt" href="#">
           <svg class="social__yt-img" width="28" height="22">
             <use xlink:href="./img/stack.svg#youtube"></use>
           </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
+        </li>
+        <li class="social__item">
         <a class="social__link social__tg" href="#">
           <svg class="social__tg-img" width="28" height="22">
             <use xlink:href="./img/stack.svg#telegram"></use>
           </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
-      </div>
-      <div class="page__footer-html-wrapper">
+        </li>
+      </ul>
         <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
           <svg class="page__footer-html-img" width="27" height="34">
             <use xlink:href="./img/stack.svg#htmlacademy"></use>
           </svg>
           <span class="visually-hidden">Разработано html academy</span>
         </a>
-      </div>
     </div>
   </footer>
 

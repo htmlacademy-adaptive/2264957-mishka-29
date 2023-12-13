@@ -110,16 +110,19 @@
   @include tablet {
     flex-direction: inherit;
     align-items: center;
+    gap: 30px;
   }
 }
 
 .page__footer-social {
+  @include list;
+
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 27px;
+  gap: 57px;
   width: 100%;
-  padding: 25px 0 28px 0;
+  padding: 37px 0 39px 0;
 
   &::after {
     content: "";
@@ -136,6 +139,7 @@
 
   @include tablet {
     padding: 0;
+    flex-wrap: wrap;
   }
 }
 
@@ -161,15 +165,6 @@
   }
 }
 
-.page__footer-html-wrapper {
-  margin: 0 auto;
-  padding: 27px 0 32px 0;
-
-  @include tablet {
-    padding: 0;
-  }
-}
-
 .page__footer-html {
   color: $black;
   font-family: inherit;
@@ -177,6 +172,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
+  margin: 0 auto;
+  padding: 27px 0 32px 0;
+
 
   &:hover {
     svg {
@@ -194,6 +192,7 @@
   @include tablet {
     display: flex;
     align-items: center;
+    padding: 0;
   }
 }
 

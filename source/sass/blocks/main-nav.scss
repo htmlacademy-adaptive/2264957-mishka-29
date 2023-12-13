@@ -7,6 +7,7 @@
   @include tablet {
     display: grid;
     grid-template-columns: 321px 83px 1fr;
+    align-items: start;
   }
 
   @include desktop {
@@ -48,6 +49,7 @@
       display: flex;
       grid-column: 1/2;
       grid-row: 2/3;
+      flex-wrap: wrap;
     }
 
     @include desktop {
@@ -60,7 +62,6 @@
 
 .main-nav__item {
   position: relative;
-
   text-align: left;
   background-color: $main-background;
   box-shadow: 0 1px 0 0 $navigation-shadow, 0 1px 0 0 $navigation-shadow inset;
@@ -68,7 +69,6 @@
   @include tablet {
     box-shadow: none;
     background-color: transparent;
-
 
     &--search::after {
       position: absolute;
@@ -86,55 +86,6 @@
       left: 0;
       top: 0;
       height: 100%;
-    }
-  }
-
-  &--search::before {
-    content: "";
-    mask-image: url("../img/stack.svg#search");
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    background-color: $icons-grey;
-
-    @include tablet {
-      left: 31px;
-    }
-  }
-
-  &--basket::before {
-    content: "";
-    mask-image: url("../img/stack.svg#basket");
-    position: absolute;
-    width: 21px;
-    height: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    background-color: $icons-grey;
-
-    @include tablet {
-      left: 30px;
-    }
-  }
-
-  &:hover {
-    &::before {
-      background-color: $tiffani;
-    }
-  }
-
-  &:active {
-    &::before {
-      background-color: $tiffani;
-      opacity: 0.3;
     }
   }
 }
@@ -169,6 +120,8 @@
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
+  max-width: 320px;
+  margin: 0 auto;
 
   @include tablet {
     &--catalog {
@@ -239,10 +192,55 @@
 
   &:hover {
     opacity: 0.6;
+
+    &::before {
+      background-color: $tiffani;
+    }
   }
 
   &:active {
     opacity: 0.3;
+
+    &::before {
+      background-color: $tiffani;
+      opacity: 0.3;
+    }
+  }
+
+  &--search::before {
+    content: "";
+    mask-image: url("../img/stack.svg#search");
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-color: $icons-grey;
+
+    @include tablet {
+      left: 31px;
+    }
+  }
+
+  &--basket::before {
+    content: "";
+    mask-image: url("../img/stack.svg#basket");
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-color: $icons-grey;
+
+    @include tablet {
+      left: 30px;
+    }
   }
 }
 

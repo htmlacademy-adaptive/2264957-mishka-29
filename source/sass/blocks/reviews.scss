@@ -7,11 +7,12 @@
     background-size: 350px auto;
     padding-bottom: 47px;
     padding-top: 78px;
-    margin-bottom: 115px;
+    margin-bottom: 151px;
   }
 
   @include desktop {
     background-image: none;
+    margin-bottom: 115px;
   }
 }
 
@@ -20,8 +21,7 @@
 
   @include tablet {
     display: grid;
-    grid-template-columns: 350px 175px;
-    column-gap: 143px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include desktop {
@@ -86,11 +86,16 @@
 }
 
 .reviews__text-wrapper {
-  height: 270px;
+  max-height: 270px;
   overflow-y: auto;
 
   @include tablet {
     height: 120px;
+  }
+
+  @include desktop {
+    height: auto;
+    padding-bottom: 30px;
   }
 }
 
@@ -151,6 +156,7 @@
     grid-column: 2/3;
     width: 175px;
     padding: 15px 26px;
+    justify-self: end;
   }
 
   @include desktop {
