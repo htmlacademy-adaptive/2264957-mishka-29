@@ -10,8 +10,8 @@
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="preload" href="./fonts/opensans.woff2">
-  <link rel="preload" href="./fonts/opensansbold.woff2">
+  <link rel="preload" href="./fonts/opensans.woff2" as="font">
+  <link rel="preload" href="./fonts/opensansbold.woff2" as="font">
 
 </head>
 
@@ -33,7 +33,8 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list main-nav__list--catalog">
           <li class="main-nav__item main-nav__item--catalog">
-            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current" href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__item-link main-nav__item-link--catalog main-nav__item-link--current"
+              href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item main-nav__item--knitting">
             <a class="main-nav__item-link main-nav__item-link--knitting" href="form.html">Вязание на заказ</a>
@@ -90,7 +91,8 @@
       <div class="offer__wrapper container">
         <h2 class="offer__title page__title">Вязаные корзинки</h2>
         <p class="offer__week">ТОВАР НЕДЕЛИ</p>
-        <p class="offer-description page__text">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках и трёх размерах.</p>
+        <p class="offer-description page__text">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести
+          расцветках и трёх размерах.</p>
         <dl class="offer__list">
           <div class="offer__item">
             <dt class="offer__unit page__text">Цвет:</dt>
@@ -164,11 +166,13 @@
                 class="reviews__author-name reviews__author-name--mail">@misssssiskras3</span></cite>
           </blockquote>
         </div>
-          <div class="slider__button-wrapper">
-            <button class="slider__button slider__button--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-            <button class="slider__button slider__button--next" type="button"><span class="visually-hidden">Слейдующий отзыв</span></button>
-          </div>
-          <a class="reviews__button page__button" href="form.html">написать</a>
+        <div class="slider__button-wrapper">
+          <button class="slider__button slider__button--prev" type="button"><span class="visually-hidden">Предыдущий
+              отзыв</span></button>
+          <button class="slider__button slider__button--next" type="button"><span class="visually-hidden">Слейдующий
+              отзыв</span></button>
+        </div>
+        <a class="reviews__button page__button" href="form.html">написать</a>
       </div>
     </section>
     <section class="contacts container container--desktop">
@@ -180,7 +184,8 @@
         </div>
         <div class="contacts__wrapper container container--contacts">
           <p class="contacts__info">адрес:</p>
-          <address class="contacts__info contacts__info--address">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;19/8, офис 101</address>
+          <address class="contacts__info contacts__info--address">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная
+            д.&nbsp;19/8, офис 101</address>
         </div>
       </div>
       <div class="contacts__map">
@@ -205,48 +210,47 @@
       <a class="contacts__button page__button" href="form.html">Напишите нам</a>
     </section>
 
-
   </main>
 
   <footer class="page__footer">
     <div class="page__footer-wrapper container">
-        <a class="page__footer-logo" href="index.html">
-          <svg class="page__footer-logo-img" width="102" height="34">
-            <use xlink:href="./img/stack.svg#logo-footer"></use>
-          </svg>
-        </a>
+      <a class="page__footer-logo" href="index.html">
+        <svg class="page__footer-logo-img" width="102" height="34">
+          <use xlink:href="./img/stack.svg#logo-footer"></use>
+        </svg>
+      </a>
       <ul class="page__footer-social social">
         <li class="social__item">
-        <a class="social__link social__vk" href="#">
-          <svg class="social__vk-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#vkontakte"></use>
-          </svg>
-          <span class="visually-hidden">В контакте</span>
-        </a>
+          <a class="social__link social__vk" href="#">
+            <svg class="social__vk-img" width="28" height="22">
+              <use xlink:href="./img/stack.svg#vkontakte"></use>
+            </svg>
+            <span class="visually-hidden">В контакте</span>
+          </a>
         </li>
         <li class="social__item">
-        <a class="social__link social__yt" href="#">
-          <svg class="social__yt-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#youtube"></use>
-          </svg>
-          <span class="visually-hidden">Ютуб</span>
-        </a>
+          <a class="social__link social__yt" href="#">
+            <svg class="social__yt-img" width="28" height="22">
+              <use xlink:href="./img/stack.svg#youtube"></use>
+            </svg>
+            <span class="visually-hidden">Ютуб</span>
+          </a>
         </li>
         <li class="social__item">
-        <a class="social__link social__tg" href="#">
-          <svg class="social__tg-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#telegram"></use>
-          </svg>
-          <span class="visually-hidden">Телеграм</span>
-        </a>
+          <a class="social__link social__tg" href="#">
+            <svg class="social__tg-img" width="28" height="22">
+              <use xlink:href="./img/stack.svg#telegram"></use>
+            </svg>
+            <span class="visually-hidden">Телеграм</span>
+          </a>
         </li>
       </ul>
-        <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <svg class="page__footer-html-img" width="27" height="34">
-            <use xlink:href="./img/stack.svg#htmlacademy"></use>
-          </svg>
-          <span class="visually-hidden">Разработано html academy</span>
-        </a>
+      <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+        <svg class="page__footer-html-img" width="27" height="34">
+          <use xlink:href="./img/stack.svg#htmlacademy"></use>
+        </svg>
+        <span class="visually-hidden">Разработано html academy</span>
+      </a>
     </div>
   </footer>
 

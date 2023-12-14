@@ -10,8 +10,8 @@
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="preload" href="./fonts/opensans.woff2">
-  <link rel="preload" href="./fonts/opensansbold.woff2">
+  <link rel="preload" href="./fonts/opensans.woff2" as="font">
+  <link rel="preload" href="./fonts/opensansbold.woff2" as="font">
 
 </head>
 
@@ -99,8 +99,7 @@
             </div>
             <div class="catalog__item-wrapper catalog__item-wrapper--price">
               <p class="catalog__item-price">1 200 руб.</p>
-              <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в
-                  корзину</span></button>
+              <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
             </div>
           </div>
         </li>
@@ -127,8 +126,7 @@
             </div>
             <div class="catalog__item-wrapper catalog__item-wrapper--price">
               <p class="catalog__item-price">690 руб.</p>
-              <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в
-                  корзину</span></button>
+              <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
             </div>
           </div>
         </li>
@@ -158,16 +156,12 @@
             </div>
             <div class="catalog__item-wrapper catalog__item-wrapper--price">
               <p class="catalog__item-price">1 500 руб.</p>
-              <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в
-                  корзину</span></button>
+              <button class="catalog__item-button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
             </div>
           </div>
         </li>
       </ul>
-
-
     </section>
-
     <section class="video container">
       <div class="video-wrapper">
         <h2 class="video__title">Процесс производства</h2>
@@ -189,96 +183,83 @@
             <span class="visually-hidden">Запустить видео</span>
           </button>
         </div>
-        <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-          появляются наши товары.</p>
+        <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="video__button page__button" href="form.html">СДелать заказ</a>
       </div>
     </section>
   </main>
-
   <footer class="page__footer">
     <div class="page__footer-wrapper container">
-        <a class="page__footer-logo" href="index.html">
-          <svg class="page__footer-logo-img" width="102" height="34">
-            <use xlink:href="./img/stack.svg#logo-footer"></use>
-          </svg>
-        </a>
+      <a class="page__footer-logo" href="index.html">
+        <svg class="page__footer-logo-img" width="102" height="34">
+          <use xlink:href="./img/stack.svg#logo-footer"></use>
+        </svg>
+      </a>
       <ul class="page__footer-social social">
         <li class="social__item">
-        <a class="social__link social__vk" href="#">
-          <svg class="social__vk-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#vkontakte"></use>
-          </svg>
-          <span class="visually-hidden">В контакте</span>
-        </a>
+          <a class="social__link social__vk" href="#">
+            <svg class="social__vk-img" width="28" height="22">
+              <use xlink:href="./img/stack.svg#vkontakte"></use>
+            </svg>
+            <span class="visually-hidden">В контакте</span>
+          </a>
         </li>
         <li class="social__item">
-        <a class="social__link social__yt" href="#">
-          <svg class="social__yt-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#youtube"></use>
-          </svg>
-          <span class="visually-hidden">Ютуб</span>
-        </a>
+          <a class="social__link social__yt" href="#">
+            <svg class="social__yt-img" width="28" height="22">
+              <use xlink:href="./img/stack.svg#youtube"></use>
+            </svg>
+            <span class="visually-hidden">Ютуб</span>
+          </a>
         </li>
         <li class="social__item">
-        <a class="social__link social__tg" href="#">
-          <svg class="social__tg-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#telegram"></use>
-          </svg>
-          <span class="visually-hidden">Телеграм</span>
-        </a>
+          <a class="social__link social__tg" href="#">
+            <svg class="social__tg-img" width="28" height="22">
+              <use xlink:href="./img/stack.svg#telegram"></use>
+            </svg>
+            <span class="visually-hidden">Телеграм</span>
+          </a>
         </li>
       </ul>
-        <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <svg class="page__footer-html-img" width="27" height="34">
-            <use xlink:href="./img/stack.svg#htmlacademy"></use>
-          </svg>
-          <span class="visually-hidden">Разработано html academy</span>
-        </a>
+      <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+        <svg class="page__footer-html-img" width="27" height="34">
+          <use xlink:href="./img/stack.svg#htmlacademy"></use>
+        </svg>
+        <span class="visually-hidden">Разработано html academy</span>
+      </a>
     </div>
   </footer>
-
   <section class="modal">
     <div class="modal__order-message order-message">
       <h2 class="order-message__heading">Добавить&nbsp;<br>в корзину</h2>
-
       <form class="order-message__form" action="https://echo.htmlacademy.ru/" method="post">
         <p class="order-message__description">Выберите размер:</p>
-
         <ul class="order-message__list">
           <li class="order-message__item">
             <label class="order-message__label">
               <input class="visually-hidden order-message__control" type="radio" name="size" value="S" checked>
-
               <span class="order-message__control-description">S</span>
             </label>
           </li>
-
           <li class="order-message__item">
             <label class="order-message__label">
               <input class="visually-hidden order-message__control" type="radio" name="size" value="M">
-
               <span class="order-message__control-description">M</span>
             </label>
           </li>
-
           <li class="order-message__item">
             <label class="order-message__label">
               <input class="visually-hidden order-message__control" type="radio" name="size" value="L">
-
               <span class="order-message__control-description">L</span>
             </label>
           </li>
         </ul>
-
         <button class="order-message__button page__button page__button--modal" type="submit">Добавить</button>
       </form>
     </div>
   </section>
   <script src="./js/main.js" defer></script>
   <script src="./js/modal.js" defer></script>
-
-
 </body>
 
 </html>
